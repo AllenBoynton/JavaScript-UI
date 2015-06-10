@@ -4,10 +4,10 @@ var questions = {
 		"appQuestions": {
 			
 			title1: "What is your name?",
-			answer1": "Al Boynton",
+			answer1: "Al Boynton",
 		
 			title2: "What is your chat user name, including the host?",
-			answer2: "alboynton4@gmail.com and my host would be gMail with that name",
+			answer2: "alboynton4@gmail.com and my host would be Gmail.",
 		
 			title3: "In which time zone do you reside?",
 			answer3: "Eastern Time Zone",
@@ -38,3 +38,314 @@ var questions = {
 					
 		}		
 };
+
+// Functions for questions
+var getAnswer1 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title1 + "\n" + "\n" + questions.appQuestions.answer1,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer2 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title2 + "\n" + "\n" + questions.appQuestions.answer2,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer3 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title3 + "\n" + "\n" + questions.appQuestions.answer3,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer4 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title4 + "\n" + "\n" + questions.appQuestions.answer4,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer5 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title5 + "\n" + "\n" + questions.appQuestions.answer5,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer6 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title6 + "\n" + "\n" + questions.appQuestions.answer6,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer7 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title7 + "\n" + "\n" + questions.appQuestions.answer7,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer8 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title8 + "\n" + "\n" + questions.appQuestions.answer8,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer9 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title9 + "\n" + "\n" + questions.appQuestions.answer9,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer10 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title10 + "\n" + "\n" + questions.appQuestions.answer10,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+var getAnswer11 = function(){
+	
+	var answerWindow = Ti.UI.createWindow ({
+		backgroundColor: "gray",
+		title: "Question & Answer"
+	});
+	
+	var answerView = Ti.UI.createView ({
+		backgroundColor: "blue",
+		top: 150,
+		height: 150,
+		width: "100%"
+	});
+	
+	var answerLabel = Ti.UI.createLabel ({
+		text: questions.appQuestions.title11 + "\n" + "\n" + questions.appQuestions.answer11,
+		textAlign: "center",
+		left: 10,
+		right: 10,
+		color: "white"
+	});
+	
+	answerWindow.add(answerView);
+	answerView.add(answerLabel);
+	navWindow.openWindow(answerWindow);
+};
+
+// Main code
+questionView1.addEventListener("click", getAnswer1);
+questionView2.addEventListener("click", getAnswer2);
+questionView3.addEventListener("click", getAnswer3);
+questionView4.addEventListener("click", getAnswer4);
+questionView5.addEventListener("click", getAnswer5);
+questionView6.addEventListener("click", getAnswer6);
+questionView7.addEventListener("click", getAnswer7);
+questionView8.addEventListener("click", getAnswer8);
+questionView9.addEventListener("click", getAnswer9);
+questionView10.addEventListener("click", getAnswer10);
+questionView11.addEventListener("click", getAnswer11);
