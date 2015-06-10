@@ -172,21 +172,3 @@ var questionText11 = Ti.UI.createLabel ({
 	text: "title11",
 	textAlign: "center"
 });
-
-// Loading json.js file into app.js file
-var loadFile = require("json.js");
-
-// Main code
-mainWindow.add(questionView1, questionView2, questionView3, questionView4, questionView5, questionView6, questionView7, questionView8, questionView9, questionView10, questionView11);
-questionView1.add(questionText1);
-questionView2.add(questionText2);
-questionView3.add(questionText3);
-questionView4.add(questionText4);
-questionView5.add(questionText5);
-questionView6.add(questionText6);
-questionView7.add(questionText7);
-questionView8.add(questionText8);
-questionView9.add(questionText9);
-questionView10.add(questionText10);
-questionView11.add(questionText11);
-navWindow.open();
