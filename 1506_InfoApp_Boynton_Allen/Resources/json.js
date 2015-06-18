@@ -1,4 +1,4 @@
-// json file
+/* json file
 
 var dogBreeds = {
 		"strongDogs": [
@@ -123,4 +123,4 @@ var dogBreeds = {
 					image: "Newfoundland.jpg"
 				}
 		]
-};
+};*/
