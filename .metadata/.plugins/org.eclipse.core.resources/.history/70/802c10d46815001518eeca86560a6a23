@@ -1,0 +1,40 @@
+// Allen Boynton
+// MIU 1506
+// Informational App
+// June 18, 2015
+
+// Set backgroung 
+var mainWindow = Ti.UI.createWindow ({
+	backgroundImage: "images/grass.jpg",
+	title: "Top 20 Strongest Dog Breeds"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWindow
+});
+ 
+// Create a Button.
+var window1 = Ti.UI.createButton({
+	title: 'The Mastiff',
+	color: "D2FF4F",
+	font: {fontSize: 12, fontWeight: "bold", fontStyle: "roboto", fontWeight: "bold"},
+	textAlign: "center",
+	backgroundColor: "gray",
+	height: 50,
+	width: 250,
+	top: 20,
+	borderRadius: 4,
+	borderColor: "black",
+	borderWidth: 2
+});
+
+// Listen for click events.
+window1.addEventListener('click', function() {
+	alert('\'window1\' was clicked!');
+});
+
+
+// var loadFile = require("json.js");
+
+mainWindow.add(window1);
+navWindow.open();
