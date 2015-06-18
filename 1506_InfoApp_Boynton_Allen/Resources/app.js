@@ -3,6 +3,9 @@
 // Informational App
 // June 18, 2015
 
+// Create tab group
+var tabGroup = Ti.UI.createTabGroup();
+
 // Set background and home tab
 var mainWindow = Ti.UI.createWindow ({
 	backgroundImage: 'images/grass.jpg',
@@ -11,15 +14,20 @@ var mainWindow = Ti.UI.createWindow ({
 	// opacity: '20%'
 });
 
+var navWindow = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWindow
+});
+ 
+var searchWindow = Ti.UI.createWindow ({
+	title: 'Search',
+	backgroundColor: 'white'
+});
+
+// Create tabs 
 var homeTab = Ti.UI.createTab ({
 	icon: 'images/home.jpg',
 	title: 'Home',
 	window: mainWindow
-});
-
-var searchWindow = Ti.UI.createWindow ({
-	title: 'Search',
-	backgroundColor: 'white'
 });
 
 // Create a Search tab
@@ -30,18 +38,6 @@ var searchTab = Ti.UI.createTab ({
 	window: searchWindow
 });
 
-// Create tab group
-var tabGroup = Ti.UI.createTabGroup();
-
-// Open tab group
-tabGroup.addTab(homeTab);
-tabGroup.addTab(searchTab);
-tabGroup.open();
-
-var navWindow = Ti.UI.iOS.createNavigationWindow ({
-	window: mainWindow
-});
- 
 // Create a Button 1.
 var window1 = Ti.UI.createButton({
 	title: 'The Mastiff',
@@ -244,5 +240,11 @@ window10.addEventListener('click', function() {
 
 // var loadFile = require("json.js");
 
-mainWindow.add(homeTab, window1, window2, window3, window4, window5, window6, window7, window8, window9, window10);
+// Open tab group
+// tabGroup.addTab(homeTab);
+// tabGroup.addTab(searchTab);
+// tabGroup.open();
+
+// Main code
+mainWindow.add(window1, window2, window3, window4, window5, window6, window7, window8, window9, window10);
 navWindow.open();
