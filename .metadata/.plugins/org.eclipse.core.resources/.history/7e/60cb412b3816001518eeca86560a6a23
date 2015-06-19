@@ -173,6 +173,11 @@ var window10 = Ti.UI.createButton({
 
 var loadFile = require("json");
 
+// Open tab group
+// tabGroup.addTab(homeTab);
+// tabGroup.addTab(searchTab);
+// tabGroup.open();
+
 // Main code
 mainWindow.add(window1, window2, window3, window4, window5, window6, window7, window8, window9, window10);
 navWindow.open();
