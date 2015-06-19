@@ -1,8 +1,7 @@
 // json file
 
 var dogBreeds = {
-		"strongDogs": [
-				
+		"strongDogs": {			
 				"theMastiff": {
 					
 					group: "Group: Working dogs",
@@ -12,8 +11,7 @@ var dogBreeds = {
 					life: "Life: 6 to 10 years",
 					origin: "Origin: England",
 					overview: "The Mastiff is one of the most ancient types of dog breeds. The proper Mastiff should be a combination of grandeur and good nature, courage and docility. He's always dignified, never shy or vicious. Mastiffs love children. That said, they are large, active dogs and can accidentally knock a toddler down with a swipe of the tail. They're best suited to homes with older children. He makes a fine companion for anyone who can accommodate his great size and doesn't mind a little drool slung here and there.",
-					personality: "Mastiffs dislike conflict between family members as well and will step between arguing spouses or a parent punishing a child. While he might look tough on the outside, the Mastiff is a sensitive dog that can become shy, fearful, or aggressive if mishandled. Never treat your Mastiff roughly or allow anyone else, including children, to do so."
-					
+					personality: "Mastiffs dislike conflict between family members as well and will step between arguing spouses or a parent punishing a child. While he might look tough on the outside, the Mastiff is a sensitive dog that can become shy, fearful, or aggressive if mishandled. Never treat your Mastiff roughly or allow anyone else, including children, to do so."				
 				},
 				
 				"theDane": {
@@ -123,7 +121,7 @@ var dogBreeds = {
 					overview: "The Newfoundland is a large, strong dog breed from, yes - Newfoundland.He was originally used as a working dog to pull nets for fishermen and haul wood from the forest. He is a capable and hardworking dog, well suited to work on land or water. He is a strong swimmer and equally strong \"pack horse.\" Sweet natured and responsive, he makes a wonderful family companion as well.",
 					personality: "The Newfoundland is known for his sweet disposition. He's like a big, loveable Teddy Bear. He loves children, is intelligent, and aims to please. He's happiest when he is with his family, and should not be left alone for long periods of time or be banished to the backyard or a kennel."
 				}
-		]
+		}
 };
 
 // Function to open Mastiff
@@ -133,58 +131,46 @@ var getDog1 = function(){
 	var detailWindow = Ti.UI.createWindow ({
 		backgroundImage: 'images/grass.jpg',
 		title: 'The Mastiff',
-		font: {fontWeight: 'bold', fontStyle: 'roboto'}
+		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
 	
 	//Image view
 	var image = Ti.UI.createImageView ({
 		image: 'images/1.Mastiff.jpg',
-		top: 30,
-		left 40,
-		right: 40,
+		height: 250,
+		top: 20,
+		left: 62,
+		right: 62,
 		borderColor: 'black',
 		borderWidth: 2 
-	});
-	
-	//Breed of dog
-	var breed = Ti.UI.createLabel({
-		text: 'The Mastiff',
-		font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto'},
-		width: 'center',
-		top: image.top + image.height + 10
 	});
 	
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.theMastiff.group + '\n' + dogBreeds.strongDogs.theMastiff.height + '\n' + dogBreeds.strongDogs.theMastiff.weight + '\n' + dogBreeds.strongDogs.theMastiff.life + '\n' + dogBreeds.strongDogs.theMastiff.feeding + '\n' + dogBreeds.strongDogs.theMastiff.origin,
-		top: breed.top + breed.height + 10,
-		left: 40,
-		right: 40,
+		top: image.top + image.height + 20,
+		left: 62,
+		right: 58,
 		color: 'black',
 		font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
 	
 	//Overview button
-	var button = Ti.UI.createButton ({
+	var button1 = Ti.UI.createButton ({
 		title: 'Overview',
 		color: 'D2FF4F',
-		font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
 		textAlign: 'center',
 		backgroundColor: 'gray',
-		height: 50,
+		height: 40,
 		width: 100,
-		top: details.top + details.height + 5,
-		left: 25,
+		top: image.top + image.height + 275,
+		right: 212,
 		borderRadius: 4,
 		borderColor: 'black',
 		borderWidth: 2
 	});
-	
-	// Listen for click events.
-	button.addEventListener('click', function() {
-	alert('"Overview" was clicked!');
-	});
-	
+		
 	//Function to enter overview
 	var getOverview = function(){
 		
@@ -197,68 +183,44 @@ var getDog1 = function(){
 		//Image view
 		var image = Ti.UI.createImageView ({
 			image: 'images/1.Mastiff.jpg',
-			top: 30,
-			left 40,
-			right: 40,
+			height: 250,
+			top: 20,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
-		});
-		
-		//Breed of dog
-		var breed = Ti.UI.createLabel({
-			text: 'The Mastiff',
-			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto'},
-			width: 'center',
-			top: image.top + image.height + 10
 		});
 		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theMastiff.overview,
-			top: breed.top + breed.height + 10,
-			left: 40,
-			right: 40,
+			top: image.top + 260,
+			left: 62,
+			right: 58,
 			color: 'black',
-			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 14, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
-		//Home button
-		var button = Ti.UI.createButton ({
-			title: 'Home',
-			color: 'D2FF4F',
-			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
-			textAlign: 'center',
-			backgroundColor: 'gray',
-			top: bottom + 50,
-			height: 50,
-			width: '100%'
-		});
+		// Secondary code for function
+		overviewWindow.add(image, details, button1);
+		navWindow.openWindow(overviewWindow);
 		
-		// Listen for click events.
-		button.addEventListener('click', function() {
-		alert('"Home" was clicked!');
-		});
 	};
 	
 	//Personality button
-	var button = Ti.UI.createButton ({
+	var button2 = Ti.UI.createButton ({
 		title: 'Personality',
 		color: 'D2FF4F',
 		font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
 		textAlign: 'center',
 		backgroundColor: 'gray',
-		height: 50,
+		height: 40,
 		width: 100,
-		top: details.top + details.height + 5,
-		right: 25,
+		top: image.top + image.height + 275,
+		right: 58,
 		borderRadius: 4,
 		borderColor: 'black',
 		borderWidth: 2
-	});
-	
-	// Listen for click events.
-	button.addEventListener('click', function() {
-	alert('"Personality" was clicked!');
 	});
 	
 	//Function to enter overview
@@ -273,46 +235,36 @@ var getDog1 = function(){
 		//Image view
 		var image = Ti.UI.createImageView ({
 			image: 'images/1.Mastiff.jpg',
-			top: 30,
-			left 40,
-			right: 40,
+			height: 250,
+			top: 20,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
-		});
-		
-		//Breed of dog
-		var breed = Ti.UI.createLabel({
-			text: 'The Mastiff',
-			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto'},
-			width: 'center',
-			top: image.top + image.height + 10
 		});
 		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theMastiff.personality,
-			top: breed.top + breed.height + 10,
-			left: 40,
-			right: 40,
+			top: image.top + image.height + 20,
+			left: 62,
+			right: 58,
 			color: 'black',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
-		//Home button
-		var button = Ti.UI.createButton ({
-			title: 'Home',
-			color: 'D2FF4F',
-			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
-			textAlign: 'center',
-			backgroundColor: 'gray',
-			top: bottom + 50,
-			height: 50,
-			width: '100%'
-		});
-		
-		// Listen for click events.
-		button.addEventListener('click', function() {
-		alert('"Home" was clicked!');
-		});
+		// Secondary code for function
+		personalityWindow.add(image, details, button2);
+		navWindow.openWindow(personalityWindow);
 	};
+	
+	// Main code for function
+	detailWindow.add(image, details, button1, button2);
+	navWindow.openWindow(detailWindow);
+	button1.addEventListener('click', getOverview);
+	button2.addEventListener('click', getPersonality);
+	
 };
+
+// Code for event listeners
+window1.addEventListener('click', getDog1);

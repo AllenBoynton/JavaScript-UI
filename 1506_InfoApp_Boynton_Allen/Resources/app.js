@@ -3,24 +3,15 @@
 // Informational App
 // June 18, 2015
 
-// Create tab group
-var tabGroup = Ti.UI.createTabGroup();
-
 // Set background and home tab
 var mainWindow = Ti.UI.createWindow ({
 	backgroundImage: 'images/grass.jpg',
 	title: 'Top 20 Strongest Dog Breeds',
-	font: {fontWeight: 'bold'},
-	// opacity: '20%'
+	font: {fontWeight: 'bold'}
 });
 
 var navWindow = Ti.UI.iOS.createNavigationWindow ({
 	window: mainWindow
-});
- 
-var searchWindow = Ti.UI.createWindow ({
-	title: 'Search',
-	backgroundColor: 'white'
 });
 
 // Create tabs 
@@ -28,14 +19,6 @@ var homeTab = Ti.UI.createTab ({
 	icon: 'images/home.jpg',
 	title: 'Home',
 	window: mainWindow
-});
-
-// Create a Search tab
-var searchTab = Ti.UI.createTab ({
-	icon: 'images/search.png',
-	title: 'Search',
-	font: {fontSize: 12},
-	window: searchWindow
 });
 
 // Create a Button 1.
@@ -53,11 +36,6 @@ var window1 = Ti.UI.createButton({
 	borderWidth: 2
 });
 
-// Listen for click events.
-window1.addEventListener('click', function() {
-	alert('"The Mastiff" was clicked!');
-});
-
 // Create a Button 2.
 var window2 = Ti.UI.createButton({
 	title: 'The Great Dane',
@@ -71,11 +49,6 @@ var window2 = Ti.UI.createButton({
 	borderRadius: 4,
 	borderColor: 'black',
 	borderWidth: 2
-});
-
-// Listen for click events.
-window2.addEventListener('click', function() {
-	alert('"The Great Dane" was clicked!');
 });
 
 // Create a Button 3.
@@ -93,11 +66,6 @@ var window3 = Ti.UI.createButton({
 	borderWidth: 2
 });
 
-// Listen for click events.
-window3.addEventListener('click', function() {
-	alert('"The Saint Bernard" was clicked!');
-});
-
 // Create a Button 4.
 var window4 = Ti.UI.createButton({
 	title: 'The Rottweiller',
@@ -111,11 +79,6 @@ var window4 = Ti.UI.createButton({
 	borderRadius: 4,
 	borderColor: 'black',
 	borderWidth: 2
-});
-
-// Listen for click events.
-window4.addEventListener('click', function() {
-	alert('"The Rottweiller" was clicked!');
 });
 
 // Create a Button 5.
@@ -133,11 +96,6 @@ var window5 = Ti.UI.createButton({
 	borderWidth: 2
 });
 
-// Listen for click events.
-window5.addEventListener('click', function() {
-	alert('"The Irish Wolfhound" was clicked!');
-});
-
 // Create a Button 6.
 var window6 = Ti.UI.createButton({
 	title: 'The Boerboel',
@@ -151,11 +109,6 @@ var window6 = Ti.UI.createButton({
 	borderRadius: 4,
 	borderColor: 'black',
 	borderWidth: 2
-});
-
-// Listen for click events.
-window6.addEventListener('click', function() {
-	alert('"The Boerboel" was clicked!');
 });
 
 // Create a Button 7.
@@ -173,11 +126,6 @@ var window7 = Ti.UI.createButton({
 	borderWidth: 2
 });
 
-// Listen for click events.
-window7.addEventListener('click', function() {
-	alert('"The Great Pyrenees" was clicked!');
-});
-
 // Create a Button 8.
 var window8 = Ti.UI.createButton({
 	title: 'The American Pit Bull Terrier',
@@ -191,11 +139,6 @@ var window8 = Ti.UI.createButton({
 	borderRadius: 4,
 	borderColor: 'black',
 	borderWidth: 2
-});
-
-// Listen for click events.
-window8.addEventListener('click', function() {
-	alert('"The American Pit Bull Terrier" was clicked!');
 });
 
 // Create a Button 9.
@@ -213,11 +156,6 @@ var window9 = Ti.UI.createButton({
 	borderWidth: 2
 });
 
-// Listen for click events.
-window9.addEventListener('click', function() {
-	alert('"The Greater Swiss Mountain Dog" was clicked!');
-});
-
 // Create a Button 10.
 var window10 = Ti.UI.createButton({
 	title: 'The Newfoundland',
@@ -233,12 +171,7 @@ var window10 = Ti.UI.createButton({
 	borderWidth: 2
 });
 
-// Listen for click events.
-window10.addEventListener('click', function() {
-	alert('"The Newfoundland" was clicked!');
-});
-
-// var loadFile = require("json.js");
+var loadFile = require("json");
 
 // Open tab group
 // tabGroup.addTab(homeTab);
