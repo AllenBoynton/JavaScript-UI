@@ -856,8 +856,7 @@ var getDog6 = function(){
 	//Image view
 	var image = Ti.UI.createImageView ({
 		image: 'images/6.Boerboel.jpg',
-		height: 250,
-		width: 250,
+		height: 230,
 		top: 20,
 		left: 62,
 		right: 62,
@@ -868,7 +867,7 @@ var getDog6 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.theBoerboel.group + '\n' + dogBreeds.strongDogs.theBoerboel.height + '\n' + dogBreeds.strongDogs.theBoerboel.weight + '\n' + dogBreeds.strongDogs.theBoerboel.life + '\n' + dogBreeds.strongDogs.theBoerboel.feeding + '\n' + dogBreeds.strongDogs.theBoerboel.origin,
-		top: image.top + image.height + 30,
+		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -903,8 +902,7 @@ var getDog6 = function(){
 		//Image view
 		var image = Ti.UI.createImageView ({
 			image: 'images/6.Boerboel.jpg',
-			height: 250,
-			width: 250,
+			height: 230,
 			top: 20,
 			left: 62,
 			right: 62,
@@ -956,8 +954,7 @@ var getDog6 = function(){
 		//Image view
 		var image = Ti.UI.createImageView ({
 			image: 'images/6.Boerboel.jpg',
-			height: 250,
-			width: 250,
+			height: 230,
 			top: 20,
 			left: 62,
 			right: 62,
@@ -968,7 +965,7 @@ var getDog6 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theBoerboel.personality,
-			top: image.top + image.height + 40,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',

@@ -392,7 +392,7 @@ var getDog2 = function(){
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
 		// Secondary code for function
@@ -433,7 +433,7 @@ var getDog3 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.theSaint.group + '\n' + dogBreeds.strongDogs.theSaint.height + '\n' + dogBreeds.strongDogs.theSaint.weight + '\n' + dogBreeds.strongDogs.theSaint.life + '\n' + dogBreeds.strongDogs.theSaint.feeding + '\n' + dogBreeds.strongDogs.theSaint.origin,
-		top: image.top + image.height + 30,
+		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -480,7 +480,7 @@ var getDog3 = function(){
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theSaint.overview,
-			top: image.top + 240,
+			top: image.top + 260,
 			left: 62,
 			right: 58,
 			color: 'black',
@@ -533,11 +533,11 @@ var getDog3 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theSaint.personality,
-			top: image.top + image.height + 50,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
 		// Secondary code for function
@@ -566,11 +566,10 @@ var getDog4 = function(){
 	//Image view
 	var image = Ti.UI.createImageView ({
 		image: 'images/4.Rottweiler.jpg',
-		height: 200,
-		width: 300,
+		height: 230,
 		top: 20,
-		left: 40,
-		right: 40,
+		left: 62,
+		right: 62,
 		borderColor: 'black',
 		borderWidth: 2 
 	});
@@ -578,7 +577,7 @@ var getDog4 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.theRott.group + '\n' + dogBreeds.strongDogs.theRott.height + '\n' + dogBreeds.strongDogs.theRott.weight + '\n' + dogBreeds.strongDogs.theRott.life + '\n' + dogBreeds.strongDogs.theRott.feeding + '\n' + dogBreeds.strongDogs.theRott.origin,
-		top: image.top + image.height + 20,
+		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -613,11 +612,10 @@ var getDog4 = function(){
 		//Image view
 		var image = Ti.UI.createImageView ({
 			image: 'images/4.Rottweiler.jpg',
-			height: 200,
-			width: 300,
+			height: 230,
 			top: 20,
-			left: 40,
-			right: 40,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
 		});
@@ -666,11 +664,10 @@ var getDog4 = function(){
 		//Image view
 		var image = Ti.UI.createImageView ({
 			image: 'images/4.Rottweiler.jpg',
-			height: 200,
-			width: 300,
+			height: 230,
 			top: 20,
-			left: 40,
-			right: 40,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
 		});
@@ -712,10 +709,9 @@ var getDog5 = function(){
 	var image = Ti.UI.createImageView ({
 		image: 'images/5.Irish-Wolfhound.jpg',
 		height: 230,
-		width: 300,
 		top: 20,
-		left: 40,
-		right: 40,
+		left: 62,
+		right: 62,
 		borderColor: 'black',
 		borderWidth: 2 
 	});
@@ -723,7 +719,7 @@ var getDog5 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.irishWolfhound.group + '\n' + dogBreeds.strongDogs.irishWolfhound.height + '\n' + dogBreeds.strongDogs.irishWolfhound.weight + '\n' + dogBreeds.strongDogs.irishWolfhound.life + '\n' + dogBreeds.strongDogs.irishWolfhound.feeding + '\n' + dogBreeds.strongDogs.irishWolfhound.origin,
-		top: image.top + image.height + 20,
+		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -759,10 +755,9 @@ var getDog5 = function(){
 		var image = Ti.UI.createImageView ({
 			image: 'images/5.Irish-Wolfhound.jpg',
 			height: 230,
-			width: 300,
 			top: 20,
-			left: 40,
-			right: 40,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
 		});
@@ -812,10 +807,9 @@ var getDog5 = function(){
 		var image = Ti.UI.createImageView ({
 			image: 'images/5.Irish-Wolfhound.jpg',
 			height: 230,
-			width: 300,
 			top: 20,
-			left: 40,
-			right: 40,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
 		});
@@ -856,8 +850,7 @@ var getDog6 = function(){
 	//Image view
 	var image = Ti.UI.createImageView ({
 		image: 'images/6.Boerboel.jpg',
-		height: 250,
-		width: 250,
+		height: 230,
 		top: 20,
 		left: 62,
 		right: 62,
@@ -868,7 +861,7 @@ var getDog6 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.theBoerboel.group + '\n' + dogBreeds.strongDogs.theBoerboel.height + '\n' + dogBreeds.strongDogs.theBoerboel.weight + '\n' + dogBreeds.strongDogs.theBoerboel.life + '\n' + dogBreeds.strongDogs.theBoerboel.feeding + '\n' + dogBreeds.strongDogs.theBoerboel.origin,
-		top: image.top + image.height + 30,
+		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -903,8 +896,7 @@ var getDog6 = function(){
 		//Image view
 		var image = Ti.UI.createImageView ({
 			image: 'images/6.Boerboel.jpg',
-			height: 250,
-			width: 250,
+			height: 230,
 			top: 20,
 			left: 62,
 			right: 62,
@@ -956,8 +948,7 @@ var getDog6 = function(){
 		//Image view
 		var image = Ti.UI.createImageView ({
 			image: 'images/6.Boerboel.jpg',
-			height: 250,
-			width: 250,
+			height: 230,
 			top: 20,
 			left: 62,
 			right: 62,
@@ -968,7 +959,7 @@ var getDog6 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theBoerboel.personality,
-			top: image.top + image.height + 40,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',
