@@ -7,8 +7,7 @@
 var mainWindow = Ti.UI.createWindow ({
 	backgroundImage: 'images/grass.jpg',
 	title: 'Top 20 Strongest Dog Breeds',
-	font: {fontWeight: 'bold'},
-	fullscreen: false
+	font: {fontWeight: 'bold'}
 });
 
 var navWindow = Ti.UI.iOS.createNavigationWindow ({

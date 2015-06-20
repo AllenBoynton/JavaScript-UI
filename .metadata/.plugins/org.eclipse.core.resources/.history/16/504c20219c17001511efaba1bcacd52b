@@ -11,6 +11,24 @@ var mainWindow = Ti.UI.createWindow ({
 	fullscreen: false
 });
 
+// Create scroll view
+var scrollView = Ti.UI.createScrollView({
+  showVerticalScrollIndicator: true,
+  showHorizontalScrollIndicator: true,
+  height: '80%',
+  width: '80%'
+});
+
+var view = Ti.UI.createView({
+  backgroundColor:'#336699',
+  borderRadius: 10,
+  top: 10,
+  height: 2000,
+  width: 1000
+});
+scrollView.add(view);
+mainWindow.add(scrollView);
+
 var navWindow = Ti.UI.iOS.createNavigationWindow ({
 	window: mainWindow
 });

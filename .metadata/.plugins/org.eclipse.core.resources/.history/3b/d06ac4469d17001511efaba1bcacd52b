@@ -5,10 +5,23 @@
 
 // Set background
 var mainWindow = Ti.UI.createWindow ({
-	backgroundImage: 'images/grass.jpg',
-	title: 'Top 20 Strongest Dog Breeds',
-	font: {fontWeight: 'bold'},
-	fullscreen: false
+	backgroundColor: 'white',
+	exitOnClose: true,
+	fullscreen: false,
+	title: 'Top 20 Strongest Dog Breeds'
+});
+
+// Create scroll view
+var scrollView = Ti.UI.createScrollView({
+  showVerticalScrollIndicator: true,
+  showHorizontalScrollIndicator: true,
+  height: '100%',
+  width: '100%'
+});
+
+var view = Ti.UI.createView({
+  backgroundImage: 'images/grass.jpg',
+  font: {fontWeight: 'bold'}
 });
 
 var navWindow = Ti.UI.iOS.createNavigationWindow ({
@@ -169,5 +182,7 @@ var window10 = Ti.UI.createButton({
 var loadFile = require("json");
 
 // Main code
+scrollView.add(view);
+mainWindow.add(scrollView);
 mainWindow.add(window1, window2, window3, window4, window5, window6, window7, window8, window9, window10);
 navWindow.open();
