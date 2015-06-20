@@ -58,7 +58,6 @@
 	</array>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>appicon.png</string>
 	</array>
 	<key>UILaunchImages</key>
 	<array>
@@ -109,29 +108,6 @@
 			<string>Portrait</string>
 			<key>UILaunchImageSize</key>
 			<string>{320, 568}</string>
-			<key>UILaunchImageMinimumOSVersion</key>
-			<string>7.0</string>
-		</dict>
-	</array>
-	<key>UILaunchImages~ipad</key>
-	<array>
-		<dict>
-			<key>UILaunchImageName</key>
-			<string>Default-Portrait</string>
-			<key>UILaunchImageOrientation</key>
-			<string>Portrait</string>
-			<key>UILaunchImageSize</key>
-			<string>{768, 1024}</string>
-			<key>UILaunchImageMinimumOSVersion</key>
-			<string>7.0</string>
-		</dict>
-		<dict>
-			<key>UILaunchImageName</key>
-			<string>Default-Landscape</string>
-			<key>UILaunchImageOrientation</key>
-			<string>Landscape</string>
-			<key>UILaunchImageSize</key>
-			<string>{768, 1024}</string>
 			<key>UILaunchImageMinimumOSVersion</key>
 			<string>7.0</string>
 		</dict>

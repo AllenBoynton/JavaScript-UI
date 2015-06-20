@@ -1003,7 +1003,7 @@ var getDog7 = function(){
 		image: 'images/7.Great-Pyrenees.jpg',
 		height: 230,
 		width: 300,
-		top: 20,
+		top: 10,
 		left: 40,
 		right: 40,
 		borderColor: 'black',
@@ -1148,7 +1148,7 @@ var getDog8 = function(){
 		image: 'images/8.American-Pit-Bull-Terrier.jpg',
 		height: 230,
 		width: 300,
-		top: 20,
+		top: 40,
 		left: 40,
 		right: 40,
 		borderColor: 'black',
@@ -1158,7 +1158,7 @@ var getDog8 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.thePitt.group + '\n' + dogBreeds.strongDogs.thePitt.height + '\n' + dogBreeds.strongDogs.thePitt.weight + '\n' + dogBreeds.strongDogs.thePitt.life + '\n' + dogBreeds.strongDogs.thePitt.feeding + '\n' + dogBreeds.strongDogs.thePitt.origin,
-		top: image.top + image.height + 20,
+		top: image.top + image.height + 40,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -1179,6 +1179,27 @@ var getDog8 = function(){
 		borderRadius: 4,
 		borderColor: 'black',
 		borderWidth: 2
+	});
+	
+	// Add a slider
+	var slider = Titanium.UI.createSlider({
+	    top: 5,
+	    min: 0,
+	    max: 100,
+	    width: '100%',
+	    value: 50
+	    });
+	
+	var label = Ti.UI.createLabel({
+	    text: slider.value,
+	    width: '100%',
+	    top: 30,
+	    left: 0,
+	    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+	    });
+	
+	slider.addEventListener('change', function(e) {
+	    label.text = String.format("%3.1f", e.value);
 	});
 		
 	//Function to enter overview
@@ -1271,7 +1292,8 @@ var getDog8 = function(){
 	};
 	
 	// Main code for function
-	detailWindow.add(image, details, button1, button2);
+	detailWindow.add(image, details, button1, button2, slider);
+	slider.add(label);
 	navWindow.openWindow(detailWindow);
 	button1.addEventListener('click', getOverview);
 	button2.addEventListener('click', getPersonality);
