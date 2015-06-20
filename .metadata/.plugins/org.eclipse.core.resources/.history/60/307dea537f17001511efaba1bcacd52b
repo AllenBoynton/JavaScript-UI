@@ -1147,10 +1147,9 @@ var getDog8 = function(){
 	var image = Ti.UI.createImageView ({
 		image: 'images/8.American-Pit-Bull-Terrier.jpg',
 		height: 230,
-		width: 300,
 		top: 20,
-		left: 40,
-		right: 40,
+		left: 62,
+		right: 62,
 		borderColor: 'black',
 		borderWidth: 2 
 	});
@@ -1158,7 +1157,7 @@ var getDog8 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.thePitt.group + '\n' + dogBreeds.strongDogs.thePitt.height + '\n' + dogBreeds.strongDogs.thePitt.weight + '\n' + dogBreeds.strongDogs.thePitt.life + '\n' + dogBreeds.strongDogs.thePitt.feeding + '\n' + dogBreeds.strongDogs.thePitt.origin,
-		top: image.top + image.height + 20,
+		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -1194,10 +1193,9 @@ var getDog8 = function(){
 		var image = Ti.UI.createImageView ({
 			image: 'images/8.American-Pit-Bull-Terrier.jpg',
 			height: 230,
-			width: 300,
 			top: 20,
-			left: 40,
-			right: 40,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
 		});
@@ -1247,10 +1245,9 @@ var getDog8 = function(){
 		var image = Ti.UI.createImageView ({
 			image: 'images/8.American-Pit-Bull-Terrier.jpg',
 			height: 230,
-			width: 300,
 			top: 20,
-			left: 40,
-			right: 40,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
 		});
@@ -1292,10 +1289,9 @@ var getDog9 = function(){
 	var image = Ti.UI.createImageView ({
 		image: 'images/9.Greater-Swiss-Mountain-Dog.jpg',
 		height: 230,
-		width: 300,
 		top: 20,
-		left: 40,
-		right: 40,
+		left: 62,
+		right: 62,
 		borderColor: 'black',
 		borderWidth: 2 
 	});
@@ -1303,7 +1299,7 @@ var getDog9 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.theSwissy.group + '\n' + dogBreeds.strongDogs.theSwissy.height + '\n' + dogBreeds.strongDogs.theSwissy.weight + '\n' + dogBreeds.strongDogs.theSwissy.life + '\n' + dogBreeds.strongDogs.theSwissy.feeding + '\n' + dogBreeds.strongDogs.theSwissy.origin,
-		top: image.top + image.height + 20,
+		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -1339,10 +1335,9 @@ var getDog9 = function(){
 		var image = Ti.UI.createImageView ({
 			image: 'images/9.Greater-Swiss-Mountain-Dog.jpg',
 			height: 230,
-			width: 300,
 			top: 20,
-			left: 40,
-			right: 40,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
 		});
@@ -1392,10 +1387,9 @@ var getDog9 = function(){
 		var image = Ti.UI.createImageView ({
 			image: 'images/9.Greater-Swiss-Mountain-Dog.jpg',
 			height: 230,
-			width: 300,
 			top: 20,
-			left: 40,
-			right: 40,
+			left: 62,
+			right: 62,
 			borderColor: 'black',
 			borderWidth: 2
 		});
