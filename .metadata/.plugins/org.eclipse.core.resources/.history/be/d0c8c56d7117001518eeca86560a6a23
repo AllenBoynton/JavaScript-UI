@@ -1208,7 +1208,7 @@ var getDog8 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
+}:
 
 // Function to open Greater Swiss Mountain Dog
 var getDog9 = function(){
@@ -1343,7 +1343,7 @@ var getDog9 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
+}:
 
 // Function to open The Newfoundland
 var getDog10 = function(){

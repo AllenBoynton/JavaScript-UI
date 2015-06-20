@@ -202,7 +202,7 @@ var getDog1 = function(){
 		});
 		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, button1);
 		navWindow.openWindow(overviewWindow);
 		
 	};
@@ -254,7 +254,7 @@ var getDog1 = function(){
 		});
 		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, button2);
 		navWindow.openWindow(personalityWindow);
 	};
 	
@@ -344,7 +344,7 @@ var getDog2 = function(){
 		});
 		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, button1);
 		navWindow.openWindow(overviewWindow);
 		
 	};
@@ -396,7 +396,7 @@ var getDog2 = function(){
 		});
 		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, button2);
 		navWindow.openWindow(personalityWindow);
 	};
 
@@ -478,7 +478,7 @@ var getDog3 = function(){
 		});
 		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, button1);
 		navWindow.openWindow(overviewWindow);
 		
 	};
@@ -530,10 +530,9 @@ var getDog3 = function(){
 		});
 		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, button2);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open Rottweiller
 var getDog4 = function(){
@@ -613,7 +612,7 @@ var getDog4 = function(){
 		});
 		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, button1);
 		navWindow.openWindow(overviewWindow);
 		
 	};
@@ -665,10 +664,9 @@ var getDog4 = function(){
 		});
 		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, button2);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open Irish Wolfhound
 var getDog5 = function(){
@@ -676,13 +674,13 @@ var getDog5 = function(){
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
 		backgroundImage: 'images/grass.jpg',
-		title: 'The Irish Wolfhound',
+		title: 'The Great Dane',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
 	
 	//Image view
 	var image = Ti.UI.createImageView ({
-		image: 'images/5.Irish-Wolfhound.jpg',
+		image: 'images/2.Great-Dane.jpg',
 		height: 230,
 		top: 20,
 		left: 62,
@@ -693,7 +691,7 @@ var getDog5 = function(){
 	
 	//Details
 	var details = Ti.UI.createLabel ({
-		text: dogBreeds.strongDogs.irishWolfhound.group + '\n' + dogBreeds.strongDogs.irishWolfhound.height + '\n' + dogBreeds.strongDogs.irishWolfhound.weight + '\n' + dogBreeds.strongDogs.irishWolfhound.life + '\n' + dogBreeds.strongDogs.irishWolfhound.feeding + '\n' + dogBreeds.strongDogs.irishWolfhound.origin,
+		text: dogBreeds.strongDogs.theDane.group + '\n' + dogBreeds.strongDogs.theDane.height + '\n' + dogBreeds.strongDogs.theDane.weight + '\n' + dogBreeds.strongDogs.theDane.life + '\n' + dogBreeds.strongDogs.theDane.feeding + '\n' + dogBreeds.strongDogs.theDane.origin,
 		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
@@ -728,7 +726,7 @@ var getDog5 = function(){
 		
 		//Image view
 		var image = Ti.UI.createImageView ({
-			image: 'images/5.Irish-Wolfhound.jpg',
+			image: 'images/2.Great-Dane.jpg',
 			height: 230,
 			top: 20,
 			left: 62,
@@ -739,7 +737,7 @@ var getDog5 = function(){
 		
 		//Overview 
 		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.irishWolfhound.overview,
+			text: dogBreeds.strongDogs.theDane.overview,
 			top: image.top + 260,
 			left: 62,
 			right: 58,
@@ -748,7 +746,7 @@ var getDog5 = function(){
 		});
 		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, button1);
 		navWindow.openWindow(overviewWindow);
 		
 	};
@@ -780,7 +778,7 @@ var getDog5 = function(){
 		
 		//Image view
 		var image = Ti.UI.createImageView ({
-			image: 'images/5.Irish-Wolfhound.jpg',
+			image: 'images/2.Great-Dane.jpg',
 			height: 230,
 			top: 20,
 			left: 62,
@@ -791,7 +789,7 @@ var getDog5 = function(){
 		
 		//Personality 
 		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.irishWolfhound.personality,
+			text: dogBreeds.strongDogs.theDane.personality,
 			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
@@ -800,24 +798,23 @@ var getDog5 = function(){
 		});
 		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, button2);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
-// Function to open Boerboel
-var getDog6 = function(){
+// Function to open Great Dane
+var getDog2 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
 		backgroundImage: 'images/grass.jpg',
-		title: 'The Boerboel',
+		title: 'The Great Dane',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
 	
 	//Image view
 	var image = Ti.UI.createImageView ({
-		image: 'images/6.Boerboel.jpg',
+		image: 'images/2.Great-Dane.jpg',
 		height: 230,
 		top: 20,
 		left: 62,
@@ -828,7 +825,7 @@ var getDog6 = function(){
 	
 	//Details
 	var details = Ti.UI.createLabel ({
-		text: dogBreeds.strongDogs.theBoerboel.group + '\n' + dogBreeds.strongDogs.theBoerboel.height + '\n' + dogBreeds.strongDogs.theBoerboel.weight + '\n' + dogBreeds.strongDogs.theBoerboel.life + '\n' + dogBreeds.strongDogs.theBoerboel.feeding + '\n' + dogBreeds.strongDogs.theBoerboel.origin,
+		text: dogBreeds.strongDogs.theDane.group + '\n' + dogBreeds.strongDogs.theDane.height + '\n' + dogBreeds.strongDogs.theDane.weight + '\n' + dogBreeds.strongDogs.theDane.life + '\n' + dogBreeds.strongDogs.theDane.feeding + '\n' + dogBreeds.strongDogs.theDane.origin,
 		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
@@ -863,7 +860,7 @@ var getDog6 = function(){
 		
 		//Image view
 		var image = Ti.UI.createImageView ({
-			image: 'images/6.Boerboel.jpg',
+			image: 'images/2.Great-Dane.jpg',
 			height: 230,
 			top: 20,
 			left: 62,
@@ -874,7 +871,7 @@ var getDog6 = function(){
 		
 		//Overview 
 		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.theBoerboel.overview,
+			text: dogBreeds.strongDogs.theDane.overview,
 			top: image.top + 260,
 			left: 62,
 			right: 58,
@@ -883,7 +880,7 @@ var getDog6 = function(){
 		});
 		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, button1);
 		navWindow.openWindow(overviewWindow);
 		
 	};
@@ -915,7 +912,7 @@ var getDog6 = function(){
 		
 		//Image view
 		var image = Ti.UI.createImageView ({
-			image: 'images/6.Boerboel.jpg',
+			image: 'images/2.Great-Dane.jpg',
 			height: 230,
 			top: 20,
 			left: 62,
@@ -926,7 +923,7 @@ var getDog6 = function(){
 		
 		//Personality 
 		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.theBoerboel.personality,
+			text: dogBreeds.strongDogs.theDane.personality,
 			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
@@ -935,24 +932,23 @@ var getDog6 = function(){
 		});
 		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, button2);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
-// Function to open Great Pyrenees
-var getDog7 = function(){
+// Function to open Great Dane
+var getDog2 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
 		backgroundImage: 'images/grass.jpg',
-		title: 'The Great Pyrenees',
+		title: 'The Great Dane',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
 	
 	//Image view
 	var image = Ti.UI.createImageView ({
-		image: 'images/7.Great-Pyrenees.jpg',
+		image: 'images/2.Great-Dane.jpg',
 		height: 230,
 		top: 20,
 		left: 62,
@@ -963,7 +959,7 @@ var getDog7 = function(){
 	
 	//Details
 	var details = Ti.UI.createLabel ({
-		text: dogBreeds.strongDogs.theGreatP.group + '\n' + dogBreeds.strongDogs.theGreatP.height + '\n' + dogBreeds.strongDogs.theGreatP.weight + '\n' + dogBreeds.strongDogs.theGreatP.life + '\n' + dogBreeds.strongDogs.theGreatP.feeding + '\n' + dogBreeds.strongDogs.theGreatP.origin,
+		text: dogBreeds.strongDogs.theDane.group + '\n' + dogBreeds.strongDogs.theDane.height + '\n' + dogBreeds.strongDogs.theDane.weight + '\n' + dogBreeds.strongDogs.theDane.life + '\n' + dogBreeds.strongDogs.theDane.feeding + '\n' + dogBreeds.strongDogs.theDane.origin,
 		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
@@ -998,7 +994,7 @@ var getDog7 = function(){
 		
 		//Image view
 		var image = Ti.UI.createImageView ({
-			image: 'images/7.Great-Pyrenees.jpg',
+			image: 'images/2.Great-Dane.jpg',
 			height: 230,
 			top: 20,
 			left: 62,
@@ -1009,7 +1005,7 @@ var getDog7 = function(){
 		
 		//Overview 
 		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.theGreatP.overview,
+			text: dogBreeds.strongDogs.theDane.overview,
 			top: image.top + 260,
 			left: 62,
 			right: 58,
@@ -1018,7 +1014,7 @@ var getDog7 = function(){
 		});
 		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, button1);
 		navWindow.openWindow(overviewWindow);
 		
 	};
@@ -1050,7 +1046,7 @@ var getDog7 = function(){
 		
 		//Image view
 		var image = Ti.UI.createImageView ({
-			image: 'images/7.Great-Pyrenees.jpg',
+			image: 'images/2.Great-Dane.jpg',
 			height: 230,
 			top: 20,
 			left: 62,
@@ -1061,7 +1057,7 @@ var getDog7 = function(){
 		
 		//Personality 
 		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.theGreatP.personality,
+			text: dogBreeds.strongDogs.theDane.personality,
 			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
@@ -1070,294 +1066,23 @@ var getDog7 = function(){
 		});
 		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, button2);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
-// Function to open American Pit Bull Terrier
-var getDog8 = function(){
+// Function to open Great Dane
+var getDog2 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
 		backgroundImage: 'images/grass.jpg',
-		title: 'The American Pit Bull Terrier',
-		font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
-	});
-	
-	//Image view
-	var image = Ti.UI.createImageView ({
-		image: 'images/8.American-Pit-Bull-Terrier.jpg',
-		height: 230,
-		top: 20,
-		left: 62,
-		right: 62,
-		borderColor: 'black',
-		borderWidth: 2 
-	});
-	
-	//Details
-	var details = Ti.UI.createLabel ({
-		text: dogBreeds.strongDogs.thePitt.group + '\n' + dogBreeds.strongDogs.thePitt.height + '\n' + dogBreeds.strongDogs.thePitt.weight + '\n' + dogBreeds.strongDogs.thePitt.life + '\n' + dogBreeds.strongDogs.thePitt.feeding + '\n' + dogBreeds.strongDogs.thePitt.origin,
-		top: image.top + image.height + 10,
-		left: 62,
-		right: 58,
-		color: 'black',
-		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
-	});
-	
-	//Overview button
-	var button1 = Ti.UI.createButton ({
-		title: 'Overview',
-		color: 'D2FF4F',
-		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
-		textAlign: 'center',
-		backgroundColor: 'gray',
-		height: 40,
-		width: 100,
-		top: image.top + image.height + 275,
-		right: 212,
-		borderRadius: 4,
-		borderColor: 'black',
-		borderWidth: 2
-	});
-		
-	//Function to enter overview
-	var getOverview = function(){
-		
-		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
-			title: 'Overview',
-			font: {fontWeight: 'bold', fontStyle: 'roboto'}
-		});
-		
-		//Image view
-		var image = Ti.UI.createImageView ({
-			image: 'images/8.American-Pit-Bull-Terrier.jpg',
-			height: 230,
-			top: 20,
-			left: 62,
-			right: 62,
-			borderColor: 'black',
-			borderWidth: 2
-		});
-		
-		//Overview 
-		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.thePitt.overview,
-			top: image.top + 260,
-			left: 62,
-			right: 58,
-			color: 'black',
-			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
-		});
-		
-		// Secondary code for function
-		overviewWindow.add(image, details);
-		navWindow.openWindow(overviewWindow);
-		
-	};
-	
-	//Personality button
-	var button2 = Ti.UI.createButton ({
-		title: 'Personality',
-		color: 'D2FF4F',
-		font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
-		textAlign: 'center',
-		backgroundColor: 'gray',
-		height: 40,
-		width: 100,
-		top: image.top + image.height + 275,
-		right: 58,
-		borderRadius: 4,
-		borderColor: 'black',
-		borderWidth: 2
-	});
-	
-	//Function to enter overview
-	var getPersonality = function(){
-		
-		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
-			title: 'Personality',
-			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
-		});
-		
-		//Image view
-		var image = Ti.UI.createImageView ({
-			image: 'images/8.American-Pit-Bull-Terrier.jpg',
-			height: 230,
-			top: 20,
-			left: 62,
-			right: 62,
-			borderColor: 'black',
-			borderWidth: 2
-		});
-		
-		//Personality 
-		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.thePitt.personality,
-			top: image.top + image.height + 30,
-			left: 62,
-			right: 58,
-			color: 'black',
-			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
-		});
-		
-		// Secondary code for function
-		personalityWindow.add(image, details);
-		navWindow.openWindow(personalityWindow);
-	};
-};
-
-// Function to open Greater Swiss Mountain Dog
-var getDog9 = function(){
-	
-	//Detail window
-	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
-		title: 'The Greater Swiss Mountain Dog',
-		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
-	});
-	
-	//Image view
-	var image = Ti.UI.createImageView ({
-		image: 'images/9.Greater-Swiss-Mountain-Dog.jpg',
-		height: 230,
-		top: 20,
-		left: 62,
-		right: 62,
-		borderColor: 'black',
-		borderWidth: 2 
-	});
-	
-	//Details
-	var details = Ti.UI.createLabel ({
-		text: dogBreeds.strongDogs.theSwissy.group + '\n' + dogBreeds.strongDogs.theSwissy.height + '\n' + dogBreeds.strongDogs.theSwissy.weight + '\n' + dogBreeds.strongDogs.theSwissy.life + '\n' + dogBreeds.strongDogs.theSwissy.feeding + '\n' + dogBreeds.strongDogs.theSwissy.origin,
-		top: image.top + image.height + 10,
-		left: 62,
-		right: 58,
-		color: 'black',
-		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
-	});
-	
-	//Overview button
-	var button1 = Ti.UI.createButton ({
-		title: 'Overview',
-		color: 'D2FF4F',
-		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
-		textAlign: 'center',
-		backgroundColor: 'gray',
-		height: 40,
-		width: 100,
-		top: image.top + image.height + 275,
-		right: 212,
-		borderRadius: 4,
-		borderColor: 'black',
-		borderWidth: 2
-	});
-		
-	//Function to enter overview
-	var getOverview = function(){
-		
-		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
-			title: 'Overview',
-			font: {fontWeight: 'bold', fontStyle: 'roboto'}
-		});
-		
-		//Image view
-		var image = Ti.UI.createImageView ({
-			image: 'images/9.Greater-Swiss-Mountain-Dog.jpg',
-			height: 230,
-			top: 20,
-			left: 62,
-			right: 62,
-			borderColor: 'black',
-			borderWidth: 2
-		});
-		
-		//Overview 
-		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.theSwissy.overview,
-			top: image.top + 260,
-			left: 62,
-			right: 58,
-			color: 'black',
-			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
-		});
-		
-		// Secondary code for function
-		overviewWindow.add(image, details);
-		navWindow.openWindow(overviewWindow);
-		
-	};
-	
-	//Personality button
-	var button2 = Ti.UI.createButton ({
-		title: 'Personality',
-		color: 'D2FF4F',
-		font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
-		textAlign: 'center',
-		backgroundColor: 'gray',
-		height: 40,
-		width: 100,
-		top: image.top + image.height + 275,
-		right: 58,
-		borderRadius: 4,
-		borderColor: 'black',
-		borderWidth: 2
-	});
-	
-	//Function to enter overview
-	var getPersonality = function(){
-		
-		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
-			title: 'Personality',
-			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
-		});
-		
-		//Image view
-		var image = Ti.UI.createImageView ({
-			image: 'images/9.Greater-Swiss-Mountain-Dog.jpg',
-			height: 230,
-			top: 20,
-			left: 62,
-			right: 62,
-			borderColor: 'black',
-			borderWidth: 2
-		});
-		
-		//Personality 
-		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.theSwissy.personality,
-			top: image.top + image.height + 30,
-			left: 62,
-			right: 58,
-			color: 'black',
-			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
-		});
-		
-		// Secondary code for function
-		personalityWindow.add(image, details);
-		navWindow.openWindow(personalityWindow);
-	};
-};
-
-// Function to open The Newfoundland
-var getDog10 = function(){
-	
-	//Detail window
-	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
-		title: 'The Newfoundland',
+		title: 'The Great Dane',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
 	
 	//Image view
 	var image = Ti.UI.createImageView ({
-		image: 'images/10.Newfoundland.jpg',
+		image: 'images/2.Great-Dane.jpg',
 		height: 230,
 		top: 20,
 		left: 62,
@@ -1368,7 +1093,7 @@ var getDog10 = function(){
 	
 	//Details
 	var details = Ti.UI.createLabel ({
-		text: dogBreeds.strongDogs.theNewFL.group + '\n' + dogBreeds.strongDogs.theNewFL.height + '\n' + dogBreeds.strongDogs.theNewFL.weight + '\n' + dogBreeds.strongDogs.theNewFL.life + '\n' + dogBreeds.strongDogs.theNewFL.feeding + '\n' + dogBreeds.strongDogs.theNewFL.origin,
+		text: dogBreeds.strongDogs.theDane.group + '\n' + dogBreeds.strongDogs.theDane.height + '\n' + dogBreeds.strongDogs.theDane.weight + '\n' + dogBreeds.strongDogs.theDane.life + '\n' + dogBreeds.strongDogs.theDane.feeding + '\n' + dogBreeds.strongDogs.theDane.origin,
 		top: image.top + image.height + 10,
 		left: 62,
 		right: 58,
@@ -1403,7 +1128,7 @@ var getDog10 = function(){
 		
 		//Image view
 		var image = Ti.UI.createImageView ({
-			image: 'images/10.Newfoundland.jpg',
+			image: 'images/2.Great-Dane.jpg',
 			height: 230,
 			top: 20,
 			left: 62,
@@ -1414,7 +1139,7 @@ var getDog10 = function(){
 		
 		//Overview 
 		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.theNewFL.overview,
+			text: dogBreeds.strongDogs.theDane.overview,
 			top: image.top + 260,
 			left: 62,
 			right: 58,
@@ -1423,7 +1148,7 @@ var getDog10 = function(){
 		});
 		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, button1);
 		navWindow.openWindow(overviewWindow);
 		
 	};
@@ -1455,7 +1180,7 @@ var getDog10 = function(){
 		
 		//Image view
 		var image = Ti.UI.createImageView ({
-			image: 'images/10.Newfoundland.jpg',
+			image: 'images/2.Great-Dane.jpg',
 			height: 230,
 			top: 20,
 			left: 62,
@@ -1466,7 +1191,7 @@ var getDog10 = function(){
 		
 		//Personality 
 		var details = Ti.UI.createLabel ({
-			text: dogBreeds.strongDogs.theNewFL.personality,
+			text: dogBreeds.strongDogs.theDane.personality,
 			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
@@ -1475,9 +1200,278 @@ var getDog10 = function(){
 		});
 		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, button2);
 		navWindow.openWindow(personalityWindow);
 	};
+
+// Function to open Great Dane
+var getDog2 = function(){
+	
+	//Detail window
+	var detailWindow = Ti.UI.createWindow ({
+		backgroundImage: 'images/grass.jpg',
+		title: 'The Great Dane',
+		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
+	});
+	
+	//Image view
+	var image = Ti.UI.createImageView ({
+		image: 'images/2.Great-Dane.jpg',
+		height: 230,
+		top: 20,
+		left: 62,
+		right: 62,
+		borderColor: 'black',
+		borderWidth: 2 
+	});
+	
+	//Details
+	var details = Ti.UI.createLabel ({
+		text: dogBreeds.strongDogs.theDane.group + '\n' + dogBreeds.strongDogs.theDane.height + '\n' + dogBreeds.strongDogs.theDane.weight + '\n' + dogBreeds.strongDogs.theDane.life + '\n' + dogBreeds.strongDogs.theDane.feeding + '\n' + dogBreeds.strongDogs.theDane.origin,
+		top: image.top + image.height + 10,
+		left: 62,
+		right: 58,
+		color: 'black',
+		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+	});
+	
+	//Overview button
+	var button1 = Ti.UI.createButton ({
+		title: 'Overview',
+		color: 'D2FF4F',
+		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+		textAlign: 'center',
+		backgroundColor: 'gray',
+		height: 40,
+		width: 100,
+		top: image.top + image.height + 275,
+		right: 212,
+		borderRadius: 4,
+		borderColor: 'black',
+		borderWidth: 2
+	});
+		
+	//Function to enter overview
+	var getOverview = function(){
+		
+		var overviewWindow = Ti.UI.createWindow ({
+			backgroundImage: 'images/grass.jpg',
+			title: 'Overview',
+			font: {fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+		
+		//Image view
+		var image = Ti.UI.createImageView ({
+			image: 'images/2.Great-Dane.jpg',
+			height: 230,
+			top: 20,
+			left: 62,
+			right: 62,
+			borderColor: 'black',
+			borderWidth: 2
+		});
+		
+		//Overview 
+		var details = Ti.UI.createLabel ({
+			text: dogBreeds.strongDogs.theDane.overview,
+			top: image.top + 260,
+			left: 62,
+			right: 58,
+			color: 'black',
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+		
+		// Secondary code for function
+		overviewWindow.add(image, details, button1);
+		navWindow.openWindow(overviewWindow);
+		
+	};
+	
+	//Personality button
+	var button2 = Ti.UI.createButton ({
+		title: 'Personality',
+		color: 'D2FF4F',
+		font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+		textAlign: 'center',
+		backgroundColor: 'gray',
+		height: 40,
+		width: 100,
+		top: image.top + image.height + 275,
+		right: 58,
+		borderRadius: 4,
+		borderColor: 'black',
+		borderWidth: 2
+	});
+	
+	//Function to enter overview
+	var getPersonality = function(){
+		
+		var personalityWindow = Ti.UI.createWindow ({
+			backgroundImage: 'images/grass.jpg',
+			title: 'Personality',
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+		
+		//Image view
+		var image = Ti.UI.createImageView ({
+			image: 'images/2.Great-Dane.jpg',
+			height: 230,
+			top: 20,
+			left: 62,
+			right: 62,
+			borderColor: 'black',
+			borderWidth: 2
+		});
+		
+		//Personality 
+		var details = Ti.UI.createLabel ({
+			text: dogBreeds.strongDogs.theDane.personality,
+			top: image.top + image.height + 30,
+			left: 62,
+			right: 58,
+			color: 'black',
+			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+		
+		// Secondary code for function
+		personalityWindow.add(image, details, button2);
+		navWindow.openWindow(personalityWindow);
+	};
+
+// Function to open Great Dane
+var getDog2 = function(){
+	
+	//Detail window
+	var detailWindow = Ti.UI.createWindow ({
+		backgroundImage: 'images/grass.jpg',
+		title: 'The Great Dane',
+		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
+	});
+	
+	//Image view
+	var image = Ti.UI.createImageView ({
+		image: 'images/2.Great-Dane.jpg',
+		height: 230,
+		top: 20,
+		left: 62,
+		right: 62,
+		borderColor: 'black',
+		borderWidth: 2 
+	});
+	
+	//Details
+	var details = Ti.UI.createLabel ({
+		text: dogBreeds.strongDogs.theDane.group + '\n' + dogBreeds.strongDogs.theDane.height + '\n' + dogBreeds.strongDogs.theDane.weight + '\n' + dogBreeds.strongDogs.theDane.life + '\n' + dogBreeds.strongDogs.theDane.feeding + '\n' + dogBreeds.strongDogs.theDane.origin,
+		top: image.top + image.height + 10,
+		left: 62,
+		right: 58,
+		color: 'black',
+		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+	});
+	
+	//Overview button
+	var button1 = Ti.UI.createButton ({
+		title: 'Overview',
+		color: 'D2FF4F',
+		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+		textAlign: 'center',
+		backgroundColor: 'gray',
+		height: 40,
+		width: 100,
+		top: image.top + image.height + 275,
+		right: 212,
+		borderRadius: 4,
+		borderColor: 'black',
+		borderWidth: 2
+	});
+		
+	//Function to enter overview
+	var getOverview = function(){
+		
+		var overviewWindow = Ti.UI.createWindow ({
+			backgroundImage: 'images/grass.jpg',
+			title: 'Overview',
+			font: {fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+		
+		//Image view
+		var image = Ti.UI.createImageView ({
+			image: 'images/2.Great-Dane.jpg',
+			height: 230,
+			top: 20,
+			left: 62,
+			right: 62,
+			borderColor: 'black',
+			borderWidth: 2
+		});
+		
+		//Overview 
+		var details = Ti.UI.createLabel ({
+			text: dogBreeds.strongDogs.theDane.overview,
+			top: image.top + 260,
+			left: 62,
+			right: 58,
+			color: 'black',
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+		
+		// Secondary code for function
+		overviewWindow.add(image, details, button1);
+		navWindow.openWindow(overviewWindow);
+		
+	};
+	
+	//Personality button
+	var button2 = Ti.UI.createButton ({
+		title: 'Personality',
+		color: 'D2FF4F',
+		font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+		textAlign: 'center',
+		backgroundColor: 'gray',
+		height: 40,
+		width: 100,
+		top: image.top + image.height + 275,
+		right: 58,
+		borderRadius: 4,
+		borderColor: 'black',
+		borderWidth: 2
+	});
+	
+	//Function to enter overview
+	var getPersonality = function(){
+		
+		var personalityWindow = Ti.UI.createWindow ({
+			backgroundImage: 'images/grass.jpg',
+			title: 'Personality',
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+		
+		//Image view
+		var image = Ti.UI.createImageView ({
+			image: 'images/2.Great-Dane.jpg',
+			height: 230,
+			top: 20,
+			left: 62,
+			right: 62,
+			borderColor: 'black',
+			borderWidth: 2
+		});
+		
+		//Personality 
+		var details = Ti.UI.createLabel ({
+			text: dogBreeds.strongDogs.theDane.personality,
+			top: image.top + image.height + 30,
+			left: 62,
+			right: 58,
+			color: 'black',
+			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+		
+		// Secondary code for function
+		personalityWindow.add(image, details, button2);
+		navWindow.openWindow(personalityWindow);
+	};
+
 	
 	// Main code for function
 	detailWindow.add(image, details, button1, button2);
@@ -1487,6 +1481,8 @@ var getDog10 = function(){
 	
 };
 
+
+
 // Code for event listeners
 window1.addEventListener('click', getDog1);
 window2.addEventListener('click', getDog2);
@@ -1495,6 +1491,6 @@ window4.addEventListener('click', getDog4);
 window5.addEventListener('click', getDog5);
 window6.addEventListener('click', getDog6);
 window7.addEventListener('click', getDog7);
-window8.addEventListener('click', getDog8);
-window9.addEventListener('click', getDog9);
-window10.addEventListener('click', getDog10);
+// window8.addEventListener('click', getDog8);
+// window9.addEventListener('click', getDog9);
+// window10.addEventListener('click', getDog10);

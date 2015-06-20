@@ -1497,4 +1497,6 @@ window6.addEventListener('click', getDog6);
 window7.addEventListener('click', getDog7);
 window8.addEventListener('click', getDog8);
 window9.addEventListener('click', getDog9);
+/*
 window10.addEventListener('click', getDog10);
+*/

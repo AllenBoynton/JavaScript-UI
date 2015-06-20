@@ -1343,7 +1343,7 @@ var getDog9 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
+}:
 
 // Function to open The Newfoundland
 var getDog10 = function(){

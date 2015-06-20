@@ -120,8 +120,8 @@ var dogBreeds = {
 					origin: "Origin: Newfoundland",
 					overview: "The Newfoundland is a large, strong dog breed from, yes - Newfoundland.He was originally used as a working dog to pull nets for fishermen and haul wood from the forest. He is a capable and hardworking dog, well suited to work on land or water. He is a strong swimmer and equally strong \"pack horse.\" Sweet natured and responsive, he makes a wonderful family companion as well.",
 					personality: "The Newfoundland is known for his sweet disposition. He's like a big, loveable Teddy Bear. He loves children, is intelligent, and aims to please. He's happiest when he is with his family, and should not be left alone for long periods of time or be banished to the backyard or a kennel."
-				}
-		}
+				},
+		},
 };
 
 // Function to open Mastiff

@@ -533,7 +533,6 @@ var getDog3 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open Rottweiller
 var getDog4 = function(){
@@ -668,7 +667,6 @@ var getDog4 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open Irish Wolfhound
 var getDog5 = function(){
@@ -803,7 +801,6 @@ var getDog5 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open Boerboel
 var getDog6 = function(){
@@ -938,7 +935,6 @@ var getDog6 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open Great Pyrenees
 var getDog7 = function(){
@@ -1073,7 +1069,6 @@ var getDog7 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open American Pit Bull Terrier
 var getDog8 = function(){
@@ -1208,7 +1203,6 @@ var getDog8 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open Greater Swiss Mountain Dog
 var getDog9 = function(){
@@ -1343,7 +1337,6 @@ var getDog9 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
-};
 
 // Function to open The Newfoundland
 var getDog10 = function(){
