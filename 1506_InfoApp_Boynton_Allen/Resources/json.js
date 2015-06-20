@@ -399,6 +399,7 @@ var getDog2 = function(){
 		personalityWindow.add(image, details);
 		navWindow.openWindow(personalityWindow);
 	};
+};
 
 // Function to open St. Bernard
 var getDog3 = function(){

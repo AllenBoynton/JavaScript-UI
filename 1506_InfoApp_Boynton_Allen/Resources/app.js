@@ -3,7 +3,7 @@
 // Informational App
 // June 18, 2015
 
-// Set background and home tab
+// Set background
 var mainWindow = Ti.UI.createWindow ({
 	backgroundImage: 'images/grass.jpg',
 	title: 'Top 20 Strongest Dog Breeds',
@@ -164,6 +164,7 @@ var window10 = Ti.UI.createButton({
 	borderWidth: 2
 });
 
+// Variable required to open second file
 var loadFile = require("json");
 
 // Main code
