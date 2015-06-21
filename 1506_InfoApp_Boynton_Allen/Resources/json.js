@@ -201,6 +201,15 @@ var getDog1 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Mastiff',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theMastiff.overview,
@@ -211,9 +220,34 @@ var getDog1 = function(){
 			font: {fontSize: 14, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, breedName, details, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
 		
 	};
 	
@@ -253,6 +287,15 @@ var getDog1 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Mastiff',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theMastiff.personality,
@@ -263,9 +306,35 @@ var getDog1 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -343,6 +412,15 @@ var getDog2 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Great Dane',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theDane.overview,
@@ -353,9 +431,34 @@ var getDog2 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, breedName, details, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
 		
 	};
 	
@@ -395,6 +498,15 @@ var getDog2 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Great Dane',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theDane.personality,
@@ -405,9 +517,35 @@ var getDog2 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -487,6 +625,15 @@ var getDog3 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Saint Bernard',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theSaint.overview,
@@ -497,9 +644,34 @@ var getDog3 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, breedName, details, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
 		
 	};
 	
@@ -540,6 +712,15 @@ var getDog3 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Saint Bernard',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theSaint.personality,
@@ -550,9 +731,35 @@ var getDog3 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -632,6 +839,15 @@ var getDog4 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Rottweiller',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theRott.overview,
@@ -642,9 +858,34 @@ var getDog4 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, breedName, details, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
 		
 	};
 	
@@ -685,6 +926,15 @@ var getDog4 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Rottweiller',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theRott.personality,
@@ -695,9 +945,35 @@ var getDog4 = function(){
 			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -777,6 +1053,15 @@ var getDog5 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.irishWolfhound.overview,
@@ -787,9 +1072,34 @@ var getDog5 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, breedName, details, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
 		
 	};
 	
@@ -830,6 +1140,15 @@ var getDog5 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.irishWolfhound.personality,
@@ -840,9 +1159,35 @@ var getDog5 = function(){
 			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -922,6 +1267,15 @@ var getDog6 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theBoerboel.overview,
@@ -932,9 +1286,34 @@ var getDog6 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, breedName, details, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
 		
 	};
 	
@@ -975,6 +1354,15 @@ var getDog6 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theBoerboel.personality,
@@ -985,9 +1373,35 @@ var getDog6 = function(){
 			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -1067,6 +1481,15 @@ var getDog7 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theGreatP.overview,
@@ -1077,9 +1500,34 @@ var getDog7 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, breedName, details, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
 		
 	};
 	
@@ -1120,6 +1568,15 @@ var getDog7 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theGreatP.personality,
@@ -1130,9 +1587,35 @@ var getDog7 = function(){
 			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -1233,6 +1716,15 @@ var getDog8 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.thePitt.overview,
@@ -1243,10 +1735,35 @@ var getDog8 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
-		// Secondary code for function
-		overviewWindow.add(image, details);
-		navWindow.openWindow(overviewWindow);
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
 		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
+		// Secondary code for function
+		overviewWindow.add(image, breedName, details, homeButton, border);
+		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
+				
 	};
 	
 	//Personality button
@@ -1286,6 +1803,15 @@ var getDog8 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.thePitt.personality,
@@ -1296,9 +1822,35 @@ var getDog8 = function(){
 			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -1379,6 +1931,15 @@ var getDog9 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theSwissy.overview,
@@ -1389,9 +1950,34 @@ var getDog9 = function(){
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener('click', removeWindow);
 		
 	};
 	
@@ -1432,6 +2018,15 @@ var getDog9 = function(){
 			borderWidth: 2
 		});
 		
+				// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theSwissy.personality,
@@ -1442,9 +2037,35 @@ var getDog9 = function(){
 			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
+		
 	};
 	
 	// Main code for function
@@ -1524,19 +2145,53 @@ var getDog10 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theNewFL.overview,
-			top: image.top + 260,
+			top: image.top + image.height + 40,
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+		});
+						
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
 		});
 		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			overviewWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		overviewWindow.add(image, details);
+		overviewWindow.add(image, breedName, details, homeButton, border);
 		navWindow.openWindow(overviewWindow);
+		homeButton.addEventListener("click", removeWindow);
 		
 	};
 	
@@ -1577,6 +2232,15 @@ var getDog10 = function(){
 			borderWidth: 2
 		});
 		
+		// Breed name
+		var breedName = Ti.UI.createLabel ({
+			text: 'The Newfoundland',
+			color: 'black',
+			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
+			textAlign: 'center',
+			top: image.top + image.height + 10
+		});
+		
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theNewFL.personality,
@@ -1587,9 +2251,34 @@ var getDog10 = function(){
 			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
+		// Home button
+		var homeButton = Ti.UI.createButton ({
+			title: 'Home',
+			color: 'black',
+			font: {fontSize: 18, fontWeight: 'bold', fontStyle: 'roboto', fontWeight: 'bold'},
+			textAlign: 'center',
+			backgroundColor: 'white',
+			height: 50,
+			width: '100%',
+			top: 554
+		});
+		
+		var border = Ti.UI.createView({
+			backgroundColor: "black",
+			top: 552,
+			height: 2
+		});
+		
+		// Created escape to home
+		var removeWindow = function(){
+			personalityWindow.close();
+			detailWindow.close();
+		};
+		
 		// Secondary code for function
-		personalityWindow.add(image, details);
+		personalityWindow.add(image, details, breedName, homeButton, border);
 		navWindow.openWindow(personalityWindow);
+		homeButton.addEventListener('click', removeWindow);
 	};
 	
 	// Main code for function
@@ -1597,7 +2286,6 @@ var getDog10 = function(){
 	navWindow.openWindow(detailWindow);
 	button1.addEventListener('click', getOverview);
 	button2.addEventListener('click', getPersonality);
-	
 };
 
 // Code for event listeners

@@ -2,16 +2,15 @@
 // MIU 1506
 // Informational App
 // June 18, 2015
-
+	
 // Set background
 var mainWindow = Ti.UI.createWindow ({
 	backgroundImage: 'images/grass.jpg',
 	title: 'Top 20 Strongest Dog Breeds',
-	font: {fontWeight: 'bold'},
-	fullscreen: false
+	font: {fontWeight: 'bold'}
 });
 
-var navWindow = Ti.UI.iOS.createNavigationWindow ({
+navWindow = Ti.UI.iOS.createNavigationWindow ({
 	window: mainWindow
 });
 
@@ -164,7 +163,7 @@ var window10 = Ti.UI.createButton({
 	borderColor: 'black',
 	borderWidth: 2
 });
-
+		
 // Variable required to open second file
 var loadFile = require("json");
 
