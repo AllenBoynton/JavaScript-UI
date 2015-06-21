@@ -938,11 +938,11 @@ var getDog4 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theRott.personality,
-			top: image.top + image.height + 40,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 14, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
 		// Home button
@@ -1055,7 +1055,7 @@ var getDog5 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The Irish Wolfhound',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1065,11 +1065,11 @@ var getDog5 = function(){
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.irishWolfhound.overview,
-			top: image.top + 270,
+			top: image.top + 260,
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
 		// Home button
@@ -1142,7 +1142,7 @@ var getDog5 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The Irish Wolfhound',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1152,7 +1152,7 @@ var getDog5 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.irishWolfhound.personality,
-			top: image.top + image.height + 50,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',
@@ -1269,7 +1269,7 @@ var getDog6 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The Boerboel',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1279,11 +1279,11 @@ var getDog6 = function(){
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theBoerboel.overview,
-			top: image.top + 285,
+			top: image.top + 275,
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
 		// Home button
@@ -1356,7 +1356,7 @@ var getDog6 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The Boerboel',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1366,7 +1366,7 @@ var getDog6 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theBoerboel.personality,
-			top: image.top + image.height + 50,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',
@@ -1483,7 +1483,7 @@ var getDog7 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The Great Pyrenees',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1493,11 +1493,11 @@ var getDog7 = function(){
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theGreatP.overview,
-			top: image.top + 280,
+			top: image.top + 260,
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
 		// Home button
@@ -1570,7 +1570,7 @@ var getDog7 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The Great Pyrenees',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1580,7 +1580,7 @@ var getDog7 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theGreatP.personality,
-			top: image.top + image.height + 50,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',
@@ -1718,7 +1718,7 @@ var getDog8 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The American Pit Bull Terrier',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1728,11 +1728,11 @@ var getDog8 = function(){
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.thePitt.overview,
-			top: image.top + 80,
+			top: image.top + 260,
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
 		// Home button
@@ -1805,7 +1805,7 @@ var getDog8 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The American Pit Bull Terrier',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1815,7 +1815,7 @@ var getDog8 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.thePitt.personality,
-			top: image.top + image.height + 50,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',
@@ -1887,7 +1887,7 @@ var getDog9 = function(){
 	//Details
 	var details = Ti.UI.createLabel ({
 		text: dogBreeds.strongDogs.theSwissy.group + '\n' + dogBreeds.strongDogs.theSwissy.height + '\n' + dogBreeds.strongDogs.theSwissy.weight + '\n' + dogBreeds.strongDogs.theSwissy.life + '\n' + dogBreeds.strongDogs.theSwissy.feeding + '\n' + dogBreeds.strongDogs.theSwissy.origin,
-		top: image.top + image.height + 30,
+		top: image.top + image.height + 20,
 		left: 62,
 		right: 58,
 		color: 'black',
@@ -1933,7 +1933,7 @@ var getDog9 = function(){
 		
 		// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The Greater Swiss Mountain Dog',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -1943,11 +1943,11 @@ var getDog9 = function(){
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theSwissy.overview,
-			top: image.top + 280,
+			top: image.top + 260,
 			left: 62,
 			right: 58,
 			color: 'black',
-			font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
+			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
 		
 		// Home button
@@ -2020,7 +2020,7 @@ var getDog9 = function(){
 		
 				// Breed name
 		var breedName = Ti.UI.createLabel ({
-			text: 'The Greater Swiss Mountain Dog',
+			text: 'The Newfoundland',
 			color: 'black',
 			font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'},
 			textAlign: 'center',
@@ -2030,7 +2030,7 @@ var getDog9 = function(){
 		//Personality 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theSwissy.personality,
-			top: image.top + image.height + 50,
+			top: image.top + image.height + 30,
 			left: 62,
 			right: 58,
 			color: 'black',
