@@ -139,7 +139,7 @@ var getDog1 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Mastiff',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -185,7 +185,7 @@ var getDog1 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -204,7 +204,7 @@ var getDog1 = function(){
 		//Overview 
 		var details = Ti.UI.createLabel ({
 			text: dogBreeds.strongDogs.theMastiff.overview,
-			top: image.top + 260,
+			top: image.top + 280,
 			left: 62,
 			right: 58,
 			color: 'black',
@@ -237,7 +237,7 @@ var getDog1 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -281,7 +281,7 @@ var getDog2 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Great Dane',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -327,7 +327,7 @@ var getDog2 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -379,7 +379,7 @@ var getDog2 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -423,7 +423,7 @@ var getDog3 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Saint Bernard',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -470,7 +470,7 @@ var getDog3 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -523,7 +523,7 @@ var getDog3 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -568,7 +568,7 @@ var getDog4 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Rottweiller',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -615,7 +615,7 @@ var getDog4 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -668,7 +668,7 @@ var getDog4 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -713,7 +713,7 @@ var getDog5 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Irish Wolfhound',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -760,7 +760,7 @@ var getDog5 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -813,7 +813,7 @@ var getDog5 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -858,7 +858,7 @@ var getDog6 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Boerboel',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -905,7 +905,7 @@ var getDog6 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -958,7 +958,7 @@ var getDog6 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -1003,7 +1003,7 @@ var getDog7 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Great Pyrenees',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -1050,7 +1050,7 @@ var getDog7 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -1103,7 +1103,7 @@ var getDog7 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -1148,7 +1148,7 @@ var getDog8 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The American Pit Bull Terrier',
 		font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -1216,7 +1216,7 @@ var getDog8 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -1269,7 +1269,7 @@ var getDog8 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -1315,7 +1315,7 @@ var getDog9 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Greater Swiss Mountain Dog',
 		font: {fontSize: 15, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -1362,7 +1362,7 @@ var getDog9 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -1415,7 +1415,7 @@ var getDog9 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -1460,7 +1460,7 @@ var getDog10 = function(){
 	
 	//Detail window
 	var detailWindow = Ti.UI.createWindow ({
-		backgroundImage: 'images/grass.jpg',
+		backgroundColor: 'CCEF97',
 		title: 'The Newfoundland',
 		font: {fontSize: 20, fontWeight: 'bold', fontStyle: 'roboto'}
 	});
@@ -1507,7 +1507,7 @@ var getDog10 = function(){
 	var getOverview = function(){
 		
 		var overviewWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Overview',
 			font: {fontWeight: 'bold', fontStyle: 'roboto'}
 		});
@@ -1560,7 +1560,7 @@ var getDog10 = function(){
 	var getPersonality = function(){
 		
 		var personalityWindow = Ti.UI.createWindow ({
-			backgroundImage: 'images/grass.jpg',
+			backgroundColor: 'CCEF97',
 			title: 'Personality',
 			font: {fontSize: 16, fontWeight: 'bold', fontStyle: 'roboto'}
 		});
