@@ -3,7 +3,9 @@
 1506_AboutMe_Boynton_Allen\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.1015EBD0-3D93-4A44-822B-496B7A78CB49
 1506_InfoApp_Boynton_Allen\:launchMode=run
 1506_InfoApp_Boynton_Allen\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.1015EBD0-3D93-4A44-822B-496B7A78CB49
-LAST_LAUNCH_TIMESTAMP=1434824330272
+1506_UtilityApp_Boynton_Allen\:launchMode=run
+1506_UtilityApp_Boynton_Allen\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.1015EBD0-3D93-4A44-822B-496B7A78CB49
+LAST_LAUNCH_TIMESTAMP=1435114033744
 eclipse.preferences.version=1
 preference.show.console.onError=true
 preference.studio.perspective.version=103
