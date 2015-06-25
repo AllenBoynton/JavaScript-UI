@@ -1,55 +1,57 @@
+// Allen Boynton
+// MIU 1506
+// Utility Application
+// June 25, 2015
+
+// Create main window
+var mainWindow = Ti.UI.createWindow ({
+	backgroundColor: "black",
+	title: 'Spiral Music Library'
+});
+
+navWindow = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWindow
+});
+
+var send = Titanium.UI.createButton({
+    title: 'Register',
+    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+});
 /*
- * A tabbed application, consisting of multiple stacks of windows associated with tabs in a tab group.
- * A starting point for tab-based application with multiple top-level windows.
- * Requires Titanium Mobile SDK 1.8.0+.
- *
- * In app.js, we generally take care of a few things:
- * - Bootstrap the application with any data we need
- * - Check for dependencies like device type, platform version or network connection
- * - Require and open our top-level UI component
- *
- */
+var list = Titanium.UI.createButton({
+	image: 'images/KS_nav_ui.png',
+    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+});
+*/
+var top10 = Titanium.UI.createButton({
+	title: 'TOP 5',
+    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+});
 
-//bootstrap and check dependencies
-if (Ti.version < 1.8) {
-  alert('Sorry - this application template requires Titanium Mobile SDK 1.8 or later');
-}
+var exit = Titanium.UI.createButton({
+    title: '       Exit ',
+    style: Titanium.UI.iPhone.SystemButtonStyle.BORDERED,
+});
 
-// This is a single context application with mutliple windows in a stack
-(function() {
-  //determine platform and form factor and render approproate components
-  var osname = Ti.Platform.osname,
-    version = Ti.Platform.version,
-    height = Ti.Platform.displayCaps.platformHeight,
-    width = Ti.Platform.displayCaps.platformWidth;
+flexSpace = Titanium.UI.createButton({
+    systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+});
 
-  function checkTablet() {
-    var platform = Ti.Platform.osname;
+var toolbar = Titanium.UI.iOS.createToolbar({
+    items:[send, flexSpace, top10, flexSpace, exit],
+    bottom:0,
+    borderTop:true,
+    borderBottom:false
+});
 
-    switch (platform) {
-      case 'ipad':
-        return true;
-      case 'android':
-        var psc = Ti.Platform.Android.physicalSizeCategory;
-        var tiAndroid = Ti.Platform.Android;
-        return psc === tiAndroid.PHYSICAL_SIZE_CATEGORY_LARGE || psc === tiAndroid.PHYSICAL_SIZE_CATEGORY_XLARGE;
-      default:
-        return Math.min(
-          Ti.Platform.displayCaps.platformHeight,
-          Ti.Platform.displayCaps.platformWidth
-        ) >= 400
-    }
-  }
+//Image view
+var image = Ti.UI.createImageView ({
+	image: 'images/Spiral_Records.png',
+	height: 250,
+	top: 300,
+	left: 10,
+	right: 10 
+});
 
-  var isTablet = checkTablet();
-
-  var Window;
-  if (isTablet) {
-    Window = require('ui/tablet/ApplicationWindow');
-  } else {
-    Window = require('ui/handheld/ApplicationWindow');
-  }
-
-  var ApplicationTabGroup = require('ui/common/ApplicationTabGroup');
-  new ApplicationTabGroup(Window).open();
-})();
+mainWindow.add(toolbar, image);
+navWindow.open();
