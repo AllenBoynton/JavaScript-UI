@@ -1,0 +1,87 @@
+// Allen Boynton
+// MIU 1506
+// Utility Application
+// June 25, 2015
+
+// Create main window
+var mainWindow = Ti.UI.createWindow ({
+	backgroundColor: "black",
+	title: 'Spiral Music Library'
+});
+
+navWindow = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWindow
+});
+
+var header = Ti.UI.createLabel ({
+	backgroundColor: 'white',
+	text: 'Access Your Library',
+	top: 0,
+	height: 30,
+	width: '100%',
+	color: '#007aff',
+	textAlign: 'center',
+	font: {fontSize: 15, fontFamily:'LobsterTwo-Italic'}
+});
+
+var send = Titanium.UI.createButton({
+    title: 'Register',
+    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+});
+
+var top10 = Titanium.UI.createButton({
+	title: 'TOP 5',
+    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+});
+
+var exit = Titanium.UI.createButton({
+    title: '       Exit ',
+    style: Titanium.UI.iPhone.SystemButtonStyle.BORDERED,
+});
+
+flexSpace = Titanium.UI.createButton({
+    systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+});
+
+var toolbar = Titanium.UI.iOS.createToolbar({
+    items:[send, flexSpace, top10, flexSpace, exit],
+    bottom:0,
+    borderTop:true,
+    borderBottom:false
+});
+
+// Username text field
+var textField = Ti.UI.createTextField ({
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	hintText: 'Enter Username',
+	color: 'white',
+	top: header.top + header.height + 40,
+	height: 40,
+	left: 80,
+	right: 80
+});
+
+// Sign In button
+var loginButton = Ti.UI.createButton ({
+	title: 'Sign In',
+	backgroundColor: '#ef662f',
+	color: 'white',
+	font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
+	borderRadius: 4,
+	top: textField.top + textField.height + 155,
+	left: 120,
+	right: 120
+});
+
+//Image view
+var image = Ti.UI.createImageView ({
+	image: 'images/mixer.jpg',
+	height: 250,
+	top: 310,
+	width: '100%' 
+});
+
+var loadFile = require('json');
+
+mainWindow.add(header, textField, loginButton, toolbar, image);
+navWindow.open();

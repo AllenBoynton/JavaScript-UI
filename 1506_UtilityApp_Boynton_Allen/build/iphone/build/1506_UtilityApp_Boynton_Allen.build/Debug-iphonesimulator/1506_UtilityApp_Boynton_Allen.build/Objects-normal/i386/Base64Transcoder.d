@@ -1,0 +1,3 @@
+dependencies: \
+  /Users/aboynton/Desktop/MIU1506-Allen_Boynton/1506_UtilityApp_Boynton_Allen/build/iphone/Classes/Base64Transcoder.c \
+  /Users/aboynton/Desktop/MIU1506-Allen_Boynton/1506_UtilityApp_Boynton_Allen/build/iphone/Classes/Base64Transcoder.h

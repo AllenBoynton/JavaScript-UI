@@ -58,7 +58,7 @@ var topSongs = {
 			time: 'Time: 3:19',
 			genre: 'Genre: Pop',
 			released: 'Released May 17, 2015',
-			label: 'Big Machine Records',			
+			label: 'Big Machine Records, LLC',			
 			rating: 'Rating: #5 Rated 4 out of 5 stars.',
 			album: 'images/badblood.png',
 			url: 'https://www.youtube.com/watch?v=QcIy9NiNbmo'
