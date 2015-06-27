@@ -34,6 +34,15 @@ var top10 = Titanium.UI.createButton({
     style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
 });
 
+/* Alert to Sign In
+top10.addEventListener("click", function(){
+	var confirmSignIn = confirm("Please Sign In");
+if (confirmSignIn == true) {
+    var y = "You pressed OK!";    	
+} else {
+    var cancel = "You pressed Cancel!";
+} 
+*/
 var exit = Titanium.UI.createButton({
     title: '       Exit ',
     style: Titanium.UI.iPhone.SystemButtonStyle.BORDERED,
@@ -54,7 +63,7 @@ var toolbar = Titanium.UI.iOS.createToolbar({
 var textField1 = Ti.UI.createTextField ({
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 	hintText: 'Username',
-	color: 'white',
+	color: 'black',
 	top: header.top + header.height + 40,
 	height: 35,
 	left: 70,
@@ -63,9 +72,9 @@ var textField1 = Ti.UI.createTextField ({
 
 // Sign In button
 var loginButton = Ti.UI.createButton ({
-	title: 'Sign In',
+	title: 'Login',
 	backgroundColor: '#ef662f',
-	color: 'white',
+	color: 'black',
 	font: {fontSize: 18, fontFamily:'LobsterTwo-BoldItalic'},
 	borderRadius: 4,
 	top: textField1.top + textField1.height + 155,
@@ -77,7 +86,7 @@ var loginButton = Ti.UI.createButton ({
 var textField2 = Ti.UI.createTextField ({
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 	hintText: 'Password',
-	color: 'white',
+	color: 'black',
 	top: textField1.top + textField1.height + 15,
 	height: 35,
 	left: 70,
@@ -85,6 +94,7 @@ var textField2 = Ti.UI.createTextField ({
 	passwordMask: true
 });
 
+// Forgot password
 var forgot = Ti.UI.createButton ({
 	title: 'Forget your password?',
 	color: '#007aff',

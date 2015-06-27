@@ -65,3 +65,56 @@ var topSongs = {
 		}
 };
 
+// Function to check username and password
+var checkUser = function(){
+	if (textField2.value !== 'password' & textField1.value !== 'user'){
+		alert('This username or password doesn\'t match what we have on file. Please re-enter your login details.');
+	} else if (textField1.value !== 'user'){
+		alert('This username doesn\'t match what we have on file. Please try again.');
+	} else if (textField2.value !== 'password'){
+		alert('This password doesn\'t match what we have on file. Please try again.');
+	} else if (textField2.value == 'password' & textField1.value == 'user'){
+		signIn();
+	};
+};
+
+// Function for logging in
+var getSignedIn = function(){
+	
+	// Main window
+	var signInWindow = Ti.UI.createWindow ({
+		backgroundColor: 'black',
+		title: 'Register Login'
+	});
+	
+	// Create view1
+	var view1 = Ti.UI.createView ({
+		backgroundColor: 'white',
+		borderRadius: 4,
+		top: 50,
+		height: 100,
+		left: 20,
+		right: 20
+	});
+	
+	// Create view2
+	var view2 = Ti.UI.createView ({
+		backgroundColor: 'white',
+		borderRadius: 4,
+		top: view1.top + view1.height + 50,
+		height: 100,
+		left: 20,
+		right: 20
+	});
+	
+	// Create view3
+	var view3 = Ti.UI.createView ({
+		backgroundColor: 'white',
+		borderRadius: 4,
+		top: view2.top + view2.height + 50,
+		height: 100,
+		left: 20,
+		right: 20
+	});
+};
+
