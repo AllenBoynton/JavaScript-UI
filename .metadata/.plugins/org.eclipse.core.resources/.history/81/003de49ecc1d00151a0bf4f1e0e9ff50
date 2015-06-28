@@ -102,24 +102,7 @@ var image = Ti.UI.createImageView ({
 	width: '100%' 
 });
 
-// Function to check username and password
-var checkUser = function(){
-	
-	if (textField2.value !== 'password' & textField1.value !== userName){
-		alert('This username or password doesn\'t match what we have on file. Please re-enter your login details.');
-	
-	} else if (textField1.value !== userName){
-		alert('This username doesn\'t match what we have on file. Please try again.');
-	
-	} else if (textField2.value !== password2){
-		alert('This password doesn\'t match what we have on file. Please try again.');
-	
-	} else if (textField2.value == password2 & textField1.value == userName){
-		signIn();
-	};
-};
-
-var loadFile = require('json', 'login');
+var loadFile = require('json');
 
 mainWindow.add(header, textField1, textField2, loginButton, forgot, toolbar, image);
 navWindow.open();
