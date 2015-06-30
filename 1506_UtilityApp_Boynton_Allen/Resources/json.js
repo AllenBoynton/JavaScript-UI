@@ -13,7 +13,7 @@ var top5 ={
 						'label'		: 'Interscope Records',			
 						'rating'	: 'Rating: Rated 4.5 out of 5 stars',
 						'image'		: 'images/Good_for_you.jpg',
-						'url'		: 'https://www.youtube.com/watch?v=DR4FJQ4dkY4'
+						'url'		: 'https://www.youtube.com/watch?v=1nERgBwuEuU'
 					},
 					
 				'omi': {
@@ -237,7 +237,7 @@ var getRegistered = function(){
 	
 	// Remove window
 	var removeWindow = function(){
-		registerWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+		registerWindow.close();
 	};
 			
 	registerWindow.add(header, textField1, fullName, inputHint1, textField2, userName, inputHint2, textField3, password1, inputHint3, textField4, password2, inputHint4, image, enterButton, required, exit2);
@@ -246,7 +246,7 @@ var getRegistered = function(){
 	exit2.addEventListener('click', removeWindow);
 	enterButton.addEventListener('click', getSongs);
 };
-	
+
 // Function for music list tableview
 var getSongs = function(){	
 	var songWindow = Ti.UI.createWindow ({
@@ -390,8 +390,8 @@ var getSongs = function(){
 	song4.addEventListener('click', getDetail4);
 	song5.addEventListener('click', getDetail5);
 	
-	};	
-		
+};	
+
 // Song 1 details
 var getDetail1 = function(){
 	var detailWindow = Ti.UI.createWindow ({
@@ -439,47 +439,40 @@ var getDetail1 = function(){
 		right: 20		
 	});
 	
-	// Variables to create toolbar
-	var playlist = Titanium.UI.createButton({
+	// Variables to create toolbar for album details window
+	var playlist = Ti.UI.createButton({
 	    title: 'Playlist',
 	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
 	});
 	
-	var albumInfo = Titanium.UI.createButton({
-		title: 'Album Info',
-	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
-	});
-	
-	var video = Titanium.UI.createButton({
+	var video = Ti.UI.createButton({
 	    title: 'Video',
 	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
 	});
 	
-	var exit4 = Titanium.UI.createButton({
-	    title: 'Exit',
-	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	var exit = Ti.UI.createButton({
+	    title: '   Exit   ',
+	    style: Ti.UI.iPhone.SystemButtonStyle.DONE,
 	});
-
-	flexSpace = Titanium.UI.createButton({
-	    systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+	
+	flexSpace = Ti.UI.createButton({
+	    systemButton:Ti.UI.iPhone.SystemButton.FLEXIBLE_SPACE
 	});
 	
 	// Toolbar with 3 tabs
-	var toolbar = Titanium.UI.iOS.createToolbar({
-	    items:[playlist, flexSpace, albumInfo, flexSpace, video, flexSpace, exit4],
+	var toolbar = Ti.UI.iOS.createToolbar({
+	    items:[playlist, flexSpace, video, flexSpace, exit],
 	    bottom:0,
 	    borderTop:true,
 	    borderBottom:false
 	});
-	
+
 	// Create web video page
-	var getVideo = function(){
+	var getVideo1 = function(){
 		var videoWindow = Ti.UI.createWindow ({
 			backgroundColor: 'black',
 			title: 'Music Video'
 		});
-				
-	    var media = require('media');
  
 		var videoPlayer = media.createYouTubePlayer({
 		      src: top5.theTitle.selenaGomez.url,
@@ -493,19 +486,16 @@ var getDetail1 = function(){
 	
 	// Remove window
 	var removeWindow = function(){
-		detailWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
-		songWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
-		
+		detailWindow.close();
 	};
-		
+	
 	detailWindow.add(header, titleSong, image, songDetail, toolbar);
 	navWindow.openWindow(detailWindow);
 	playlist.addEventListener('click', getSongs);
-	albumInfo.addEventListener('click', getDetail1);
-	video.addEventListener('click', getVideo);
-	exit4.addEventListener('click', function(){ alert('Are you sure you want to log off?'); });
-	exit4.addEventListener('click', removeWindow);
-	
+	video.addEventListener('click', getVideo1);
+	exit.addEventListener('click', function(){ alert('You will now return to the playlist!'); });
+	exit.addEventListener('click', removeWindow);
+		
 };
 
 // Song 2 details
@@ -555,17 +545,62 @@ var getDetail2 = function(){
 		right: 20		
 	});
 	
-	// Toolbar with 3 tabs
-	var tabBar = Titanium.UI.iOS.createTabbedBar({
-	    labels:['Album Info', 'Video', 'Exit'],
-	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-	    height: 30,
-	    width: '100%',
-	    bottom:0
+	// Variables to create toolbar for album details window
+	var playlist = Ti.UI.createButton({
+	    title: 'Playlist',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
 	});
-			
-	detailWindow.add(header, titleSong, image, songDetail, tabBar);
+	
+	var video = Ti.UI.createButton({
+	    title: 'Video',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var exit = Ti.UI.createButton({
+	    title: '   Exit   ',
+	    style: Ti.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	flexSpace = Ti.UI.createButton({
+	    systemButton:Ti.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+	});
+	
+	// Toolbar with 3 tabs
+	var toolbar = Ti.UI.iOS.createToolbar({
+	    items:[playlist, flexSpace, video, flexSpace, exit],
+	    bottom:0,
+	    borderTop:true,
+	    borderBottom:false
+	});
+
+// Create web video page
+	var getVideo2 = function(){
+		var videoWindow = Ti.UI.createWindow ({
+			backgroundColor: 'black',
+			title: 'Music Video'
+		});
+ 
+		var videoPlayer = media.createYouTubePlayer({
+		      src: top5.theTitle.omi.url,
+		      fullscreen:true,
+		      backButtonTitle:'Back'
+		});
+		 
+		videoWindow.add(videoPlayer);
+		navWindow.openWindow(videoWindow);
+	};
+	
+	// Remove window
+	var removeWindow = function(){
+		detailWindow.close();
+	};
+	
+	detailWindow.add(header, titleSong, image, songDetail, toolbar);
 	navWindow.openWindow(detailWindow);
+	playlist.addEventListener('click', getSongs);
+	video.addEventListener('click', getVideo2);
+	exit.addEventListener('click', function(){ alert('You will now return to the playlist!'); });
+	exit.addEventListener('click', removeWindow);
 	
 };
 
@@ -615,19 +650,64 @@ var getDetail3 = function(){
 		left: 20,
 		right: 20		
 	});
+			
+	// Variables to create toolbar for album details window
+	var playlist = Ti.UI.createButton({
+	    title: 'Playlist',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var video = Ti.UI.createButton({
+	    title: 'Video',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var exit = Ti.UI.createButton({
+	    title: '   Exit   ',
+	    style: Ti.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	flexSpace = Ti.UI.createButton({
+	    systemButton:Ti.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+	});
 	
 	// Toolbar with 3 tabs
-	var tabBar = Titanium.UI.iOS.createTabbedBar({
-	    labels:['Album Info', 'Video', 'Exit'],
-	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-	    height: 30,
-	    width: '100%',
-	    bottom:0
+	var toolbar = Ti.UI.iOS.createToolbar({
+	    items:[playlist, flexSpace, video, flexSpace, exit],
+	    bottom:0,
+	    borderTop:true,
+	    borderBottom:false
 	});
-			
-	detailWindow.add(header, titleSong, image, songDetail, tabBar);
-	navWindow.openWindow(detailWindow);
+
+	// Create web video page
+	var getVideo3 = function(){
+		var videoWindow = Ti.UI.createWindow ({
+			backgroundColor: 'black',
+			title: 'Music Video'
+		});
+				
+		var videoPlayer = media.createYouTubePlayer({
+		      src: top5.theTitle.rachelPlatten.url,
+		      fullscreen:true,
+		      backButtonTitle:'Back'
+		});
+		 
+		videoWindow.add(videoPlayer);
+		navWindow.openWindow(videoWindow);
+	};
 	
+	// Remove window
+	var removeWindow = function(){
+		detailWindow.close();
+	};
+	
+	detailWindow.add(header, titleSong, image, songDetail, toolbar);
+	navWindow.openWindow(detailWindow);
+	playlist.addEventListener('click', getSongs);
+	video.addEventListener('click', getVideo3);
+	exit.addEventListener('click', function(){ alert('You will now return to the playlist!'); });
+	exit.addEventListener('click', removeWindow);
+
 };
 
 // Song 4 details
@@ -676,19 +756,64 @@ var getDetail4 = function(){
 		left: 20,
 		right: 20		
 	});
+			
+	// Variables to create toolbar for album details window
+	var playlist = Ti.UI.createButton({
+	    title: 'Playlist',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var video = Ti.UI.createButton({
+	    title: 'Video',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var exit = Ti.UI.createButton({
+	    title: '   Exit   ',
+	    style: Ti.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	flexSpace = Ti.UI.createButton({
+	    systemButton:Ti.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+	});
 	
 	// Toolbar with 3 tabs
-	var tabBar = Titanium.UI.iOS.createTabbedBar({
-	    labels:['Album Info', 'Video', 'Exit'],
-	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-	    height: 30,
-	    width: '100%',
-	    bottom:0
+	var toolbar = Ti.UI.iOS.createToolbar({
+	    items:[playlist, flexSpace, video, flexSpace, exit],
+	    bottom:0,
+	    borderTop:true,
+	    borderBottom:false
 	});
-			
-	detailWindow.add(header, titleSong, image, songDetail, tabBar);
-	navWindow.openWindow(detailWindow);
+
+	// Create web video page
+	var getVideo4 = function(){
+		var videoWindow = Ti.UI.createWindow ({
+			backgroundColor: 'black',
+			title: 'Music Video'
+		});
+ 
+		var videoPlayer = media.createYouTubePlayer({
+		      src: top5.theTitle.theWeeknd.url,
+		      fullscreen:true,
+		      backButtonTitle:'Back'
+		});
+		 
+		videoWindow.add(videoPlayer);
+		navWindow.openWindow(videoWindow);
+	};
 	
+	// Remove window
+	var removeWindow = function(){
+		detailWindow.close();
+	};
+	
+	detailWindow.add(header, titleSong, image, songDetail, toolbar);
+	navWindow.openWindow(detailWindow);
+	playlist.addEventListener('click', getSongs);
+	video.addEventListener('click', getVideo4);
+	exit.addEventListener('click', function(){ alert('You will now return to the playlist!'); });
+	exit.addEventListener('click', removeWindow);
+
 };
 
 // Song 5 details
@@ -737,20 +862,68 @@ var getDetail5 = function(){
 		left: 20,
 		right: 20		
 	});
+			
+	// Variables to create toolbar for album details window
+	var playlist = Ti.UI.createButton({
+	    title: 'Playlist',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var video = Ti.UI.createButton({
+	    title: 'Video',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var exit = Ti.UI.createButton({
+	    title: '   Exit   ',
+	    style: Ti.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	flexSpace = Ti.UI.createButton({
+	    systemButton:Ti.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+	});
 	
 	// Toolbar with 3 tabs
-	var tabBar = Ti.UI.iOS.createTabbedBar({
-	    labels:['Album Info', 'Video', 'Exit'],
-	    style:Ti.UI.iPhone.SystemButtonStyle.BAR,
-	    height: 30,
-	    width: '100%',
-	    bottom:0
+	var toolbar = Ti.UI.iOS.createToolbar({
+	    items:[playlist, flexSpace, video, flexSpace, exit],
+	    bottom:0,
+	    borderTop:true,
+	    borderBottom:false
 	});
-			
-	detailWindow.add(header, titleSong, image, songDetail, tabBar);
-	navWindow.openWindow(detailWindow);
+
+	// Create web video page
+	var getVideo5 = function(){
+		var videoWindow = Ti.UI.createWindow ({
+			backgroundColor: 'black',
+			title: 'Music Video'
+		});
+ 
+		var videoPlayer = media.createYouTubePlayer({
+		      src: top5.theTitle.taylorSwift.url,
+		      fullscreen:true,
+		      backButtonTitle:'Back'
+		});
+		 
+		videoWindow.add(videoPlayer);
+		navWindow.openWindow(videoWindow);
+		
+	};
 	
+	// Remove window
+	var removeWindow = function(){
+		detailWindow.close();
+	};
+	
+	detailWindow.add(header, titleSong, image, songDetail, toolbar);
+	navWindow.openWindow(detailWindow);
+	playlist.addEventListener('click', getSongs);
+	video.addEventListener('click', getVideo5);
+	exit.addEventListener('click', function(){ alert('You will now return to the playlist!'); });
+	exit.addEventListener('click', removeWindow);
+
 };
+
+var media = require('media');
 
 // Main event listeners
 register.addEventListener('click', getRegistered);
