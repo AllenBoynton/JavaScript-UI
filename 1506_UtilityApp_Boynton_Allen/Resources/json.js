@@ -5,8 +5,8 @@
 var top5 ={	
 		'theTitle': {
 				'selenaGomez': {
-						'title'		: 'Good for You (feat. A$AP Rocky) - Single',
-						'artist'	: 'Selena Gomez',
+						'title'		: '#1 Good for You (feat. A$AP Rocky) - Single',
+						'artist'	: '- Selena Gomez',
 						'time'		: 'Time: 3:41',
 						'genre'		: 'Genre: Pop',
 						'released'	: 'Released June 22, 2015',
@@ -17,8 +17,8 @@ var top5 ={
 					},
 					
 				'omi': {
-						'title'		: 'Cheerleader (Felix Jaehn Remix Radio Edit) - Single',
-						'artist'	: 'Omi',
+						'title'		: '#2 Cheerleader (Felix Jaehn Remix Radio Edit) - Single',
+						'artist'	: '- Omi',
 						'time'		: 'Time: 3:00',
 						'genre'		: 'Genre: Pop',
 						'released'	: 'Released May 20, 2014',
@@ -29,8 +29,8 @@ var top5 ={
 					},
 					
 				'rachelPlatten': {
-						'title'		: 'Fight Song',
-						'artist'	: 'Rachel Platten',
+						'title'		: '#3 Fight Song',
+						'artist'	: '- Rachel Platten',
 						'time'		: 'Time: 3:23',
 						'genre'		: 'Genre: Pop',
 						'released'	: 'Released May 11, 2015',
@@ -41,8 +41,8 @@ var top5 ={
 					},
 					
 				'theWeeknd': {
-						'title'		: 'Can\'t Feel My Face - Single',
-						'artist'	: 'The Weeknd',
+						'title'		: '#4 Can\'t Feel My Face - Single',
+						'artist'	: '- The Weeknd',
 						'time'		: 'Time: 3:35',
 						'genre'		: 'Genre: R&B/Soul',
 						'released'	: 'Released June 8, 2015',
@@ -53,8 +53,8 @@ var top5 ={
 					},
 					
 				'taylorSwift': {
-						'title'		: 'Bad Blood (feat. Kendrick Lamar) - Single',
-						'artist'	: 'Taylor Swift',
+						'title'		: '#5 Bad Blood (feat. Kendrick Lamar) - Single',
+						'artist'	: '- Taylor Swift',
 						'time'		: 'Time: 3:19',
 						'genre'		: 'Genre: Pop',
 						'released'	: 'Released May 17, 2015',
@@ -266,50 +266,181 @@ var getSongs = function(){
 		font: {fontSize: 17, fontFamily:'LobsterTwo-Italic'}
 	});
 	
+	// Song 1
 	var song1 = Ti.UI.createButton ({
 		backgroundColor: 'white',
-		top: header.top + header.height + 30,
+		top: header.top + header.height + 33,
 		height: 75,
 		width: '100%'				
 	});
 
 	var song1Text = Ti.UI.createLabel ({
 		text: top5.theTitle.selenaGomez.title + '\n' + top5.theTitle.selenaGomez.artist,
-		font: {fontSize: 16, fontWeight: 'bold', fontFamily:'LobsterTwo-BoldItalic'},
+		font: {fontSize: 15, fontWeight: 'bold', fontFamily:'LobsterTwo-BoldItalic'},
 		color: '007aff',
-		left: 70,
+		left: 100,
 		right: 2
 	});
   
 	var image1 = Ti.UI.createImageView ({
-		image: 'images/Good_for_you.jpg',
+		image: top5.theTitle.selenaGomez.image,
 		height: 65,
-		left: 0
+		left: 20
+	});
+	
+	// Song 2
+	var song2 = Ti.UI.createButton ({
+		backgroundColor: 'white',
+		top: song1.top + song1.height + 33,
+		height: 75,
+		width: '100%'				
+	});
+
+	var song2Text = Ti.UI.createLabel ({
+		text: top5.theTitle.omi.title + '\n' + top5.theTitle.omi.artist,
+		font: {fontSize: 15, fontWeight: 'bold', fontFamily:'LobsterTwo-BoldItalic'},
+		color: '007aff',
+		left: 100,
+		right: 2
+	});
+  
+	var image2 = Ti.UI.createImageView ({
+		image: top5.theTitle.omi.image,
+		height: 65,
+		left: 20
+	});
+	
+	// Song 3
+	var song3 = Ti.UI.createButton ({
+		backgroundColor: 'white',
+		top: song2.top + song2.height + 33,
+		height: 75,
+		width: '100%'				
+	});
+
+	var song3Text = Ti.UI.createLabel ({
+		text: top5.theTitle.rachelPlatten.title + '\n' + top5.theTitle.rachelPlatten.artist,
+		font: {fontSize: 15, fontWeight: 'bold', fontFamily:'LobsterTwo-BoldItalic'},
+		color: '007aff',
+		left: 100,
+		right: 2
+	});
+  
+	var image3 = Ti.UI.createImageView ({
+		image: top5.theTitle.rachelPlatten.image,
+		height: 75,
+		right: 280
+	});
+	
+	// Song 4
+	var song4 = Ti.UI.createButton ({
+		backgroundColor: 'white',
+		top: song3.top + song3.height + 33,
+		height: 75,
+		width: '100%'				
+	});
+
+	var song4Text = Ti.UI.createLabel ({
+		text: top5.theTitle.theWeeknd.title + '\n' + top5.theTitle.theWeeknd.artist,
+		font: {fontSize: 15, fontWeight: 'bold', fontFamily:'LobsterTwo-BoldItalic'},
+		color: '007aff',
+		left: 100,
+		right: 2
+	});
+  
+	var image4 = Ti.UI.createImageView ({
+		image: top5.theTitle.theWeeknd.image,
+		height: 65,
+		left: 20
+	});
+	
+	// Song 5
+	var song5 = Ti.UI.createButton ({
+		backgroundColor: 'white',
+		top: song4.top + song4.height + 33,
+		height: 75,
+		width: '100%'				
+	});
+
+	var song5Text = Ti.UI.createLabel ({
+		text: top5.theTitle.taylorSwift.title + '\n' + top5.theTitle.taylorSwift.artist,
+		font: {fontSize: 15, fontWeight: 'bold', fontFamily:'LobsterTwo-BoldItalic'},
+		color: '007aff',
+		left: 100,
+		right: 2
+	});
+  
+	var image5 = Ti.UI.createImageView ({
+		image: top5.theTitle.taylorSwift.image,
+		height: 65,
+		left: 20
 	});
 	
 	// Code for top 5 window
 	song1.add(song1Text, image1);
-	songWindow.add(header, song1);
+	song2.add(song2Text, image2);
+	song3.add(song3Text, image3);
+	song4.add(song4Text, image4);
+	song5.add(song5Text, image5);
+	songWindow.add(header, song1, song2, song3, song4, song5);
 	navWindow.openWindow(songWindow);
+	song1.addEventListener('click', getDetail);
 	
-};	
+	};	
 		
 // Album details
 var getDetail = function(){
 	var detailWindow = Ti.UI.createWindow ({
-		title: this.artist,
+		title: 'Now Playing',
 		backgroundColor: 'black' 
 	});
-	var detailText = Ti.UI.createLabel ({
-		text: this.title,
-		top: 30,
-		left: 10,
-		right: 10
+	
+	// Create top page header
+	var header = Ti.UI.createLabel ({
+		backgroundColor: 'white',
+		text: top5.theTitle.selenaGomez.artist,
+		top: 0,
+		height: 30,
+		width: '100%',
+		color: '#007aff',
+		textAlign: 'center',
+		font: {fontSize: 18, fontFamily:'LobsterTwo-Italic'}
+	});
+
+	var titleSong1 = Ti.UI.createLabel ({
+		text: top5.theTitle.selenaGomez.title,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		textAlign: 'center',
+		top: header.top + header.height + 10		
 	});
 	
-	detailWindow.add(detailText);
+	var songDetail1 = Ti.UI.createLabel ({
+		
+	});
+	
+	var image1 = Ti.UI.createImageView ({
+		image: top5.theTitle.selenaGomez.image,
+		top: titleSong1.top + titleSong1.height + 2,
+		// height: 150,
+		left: 20,
+		right: 20
+	});
+	
+	// Toolbar with 3 tabs
+	var tabBar = Titanium.UI.iOS.createTabbedBar({
+	    labels:['Album Info', 'Video', 'Exit'],
+	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+	    height: 50,
+	    width: '100%',
+	    bottom:0
+	});
+		
+	detailWindow.add(header, titleSong1, image1, tabBar);
 	navWindow.openWindow(detailWindow);
+	
 };
 
+// Main event listeners
 register.addEventListener('click', getRegistered);
 loginButton.addEventListener('click', getSongs);
