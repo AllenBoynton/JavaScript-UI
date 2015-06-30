@@ -234,16 +234,10 @@ var getRegistered = function(){
     	borderTop:true,
     	borderBottom:false
 	});
-	
-	// Remove window
-	var removeWindow = function(){
-		registerWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
-	};
 			
 	registerWindow.add(header, textField1, fullName, inputHint1, textField2, userName, inputHint2, textField3, password1, inputHint3, textField4, password2, inputHint4, image, enterButton, required, exit2);
 	navWindow.openWindow(registerWindow);
 	exit2.addEventListener('click', function(){ alert('Are you sure you want to log off?'); });
-	exit2.addEventListener('click', removeWindow);
 	enterButton.addEventListener('click', getSongs);
 };
 	
@@ -276,14 +270,12 @@ var getSongs = function(){
 	var song1Text = Ti.UI.createLabel ({
 		text: top5.theTitle.selenaGomez.title + '\n' + top5.theTitle.selenaGomez.artist,
 		font: {fontSize: 16, fontWeight: 'bold', fontFamily:'LobsterTwo-BoldItalic'},
-		color: '007aff',
-		left: 70,
-		right: 2
+		color: '007aff'
 	});
   
 	var image1 = Ti.UI.createImageView ({
 		image: 'images/Good_for_you.jpg',
-		height: 65,
+		height: '100%',
 		left: 0
 	});
 	
@@ -291,6 +283,7 @@ var getSongs = function(){
 	song1.add(song1Text, image1);
 	songWindow.add(header, song1);
 	navWindow.openWindow(songWindow);
+	loginButton.addEventListener('click', getSongs);
 	
 };	
 		

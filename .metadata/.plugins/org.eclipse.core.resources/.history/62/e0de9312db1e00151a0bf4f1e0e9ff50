@@ -38,7 +38,7 @@ var top5 = Titanium.UI.createButton({
 
 var exit = Titanium.UI.createButton({
     title: '       Exit ',
-    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+    style: Titanium.UI.iPhone.SystemButtonStyle.BORDERED,
 });
 
 flexSpace = Titanium.UI.createButton({

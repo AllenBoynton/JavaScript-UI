@@ -38,7 +38,7 @@ var top5 = Titanium.UI.createButton({
 
 var exit = Titanium.UI.createButton({
     title: '       Exit ',
-    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+    style: Titanium.UI.iPhone.SystemButtonStyle.BORDERED,
 });
 
 flexSpace = Titanium.UI.createButton({
@@ -85,7 +85,7 @@ var forgot = Ti.UI.createButton ({
 	title: 'Forget your password?',
 	color: 'white',
 	textAlign: 'center',
-	top: password.top + password.height + 15,
+	top: header.top + header.height + 150,
 	font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'}
 });
 

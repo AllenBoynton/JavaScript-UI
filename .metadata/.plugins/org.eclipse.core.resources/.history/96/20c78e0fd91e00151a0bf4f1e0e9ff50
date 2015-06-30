@@ -38,7 +38,7 @@ var top5 = Titanium.UI.createButton({
 
 var exit = Titanium.UI.createButton({
     title: '       Exit ',
-    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+    style: Titanium.UI.iPhone.SystemButtonStyle.BORDERED,
 });
 
 flexSpace = Titanium.UI.createButton({
@@ -73,7 +73,7 @@ var password = Ti.UI.createTextField ({
 	keyboardType: Ti.UI.KEYBOARD_DEFAULT,
 	hintText: 'Password',
 	color: 'black',
-	top: username.top + username.height + 25,
+	top: username.top + username.height + 15,
 	height: 35,
 	left: 70,
 	right: 70,
@@ -85,7 +85,7 @@ var forgot = Ti.UI.createButton ({
 	title: 'Forget your password?',
 	color: 'white',
 	textAlign: 'center',
-	top: password.top + password.height + 15,
+	top: header.top + header.height + 150,
 	font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'}
 });
 
@@ -105,7 +105,7 @@ var getPassword = function(){
 		top: 60,
 		height: 30,
 		left: 110,
-		right: 60
+		right: 90
 	});
 	
 	//Enter email
@@ -136,7 +136,7 @@ var getPassword = function(){
 		top: emailField1.top + emailField1.height + 40,
 		height: 30,
 		left: 110,
-		right: 60
+		right: 90
 	});
 	
 	//Text for emailField2
@@ -191,9 +191,8 @@ var getPassword = function(){
 	// Main secondary code			
 	forgotWindow.add(emailField1, email, inputHint1, emailField2, username2, image, recoverButton, exit3);
 	navWindow.openWindow(forgotWindow);
-	recoverButton.addEventListener('click', function(){ alert('Your password has been sent to your email \n Click "OK" to return to Login'); });	
-	recoverButton.addEventListener('click', removeWindow);
-	exit3.addEventListener('click', removeWindow);
+	recoverButton.addEventListener('click', function(){ alert('Your password has been sent to your email \n Click "OK" to return to Login'); }, removeWindow);	
+	// recoverButton.addEventListener('click', removeWindow);
 };	
 	
 // Sign In button
