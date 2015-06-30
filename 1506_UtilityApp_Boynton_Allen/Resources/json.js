@@ -439,20 +439,72 @@ var getDetail1 = function(){
 		right: 20		
 	});
 	
+	// Variables to create toolbar
+	var playlist = Titanium.UI.createButton({
+	    title: 'Playlist',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var albumInfo = Titanium.UI.createButton({
+		title: 'Album Info',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var video = Titanium.UI.createButton({
+	    title: 'Video',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
+	
+	var exit4 = Titanium.UI.createButton({
+	    title: 'Exit',
+	    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+	});
 
+	flexSpace = Titanium.UI.createButton({
+	    systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+	});
 	
 	// Toolbar with 3 tabs
-	var tabBar = Titanium.UI.iOS.createTabbedBar({
-	    labels:['Album Info', 'Video', 'Exit'],
-	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-	    height: 30,
-	    width: '100%',
-	    bottom:0
+	var toolbar = Titanium.UI.iOS.createToolbar({
+	    items:[playlist, flexSpace, albumInfo, flexSpace, video, flexSpace, exit4],
+	    bottom:0,
+	    borderTop:true,
+	    borderBottom:false
 	});
-		
 	
-	detailWindow.add(header, titleSong, image, songDetail, tabBar);
+	// Create web video page
+	var getVideo = function(){
+		var videoWindow = Ti.UI.createWindow ({
+			backgroundColor: 'black',
+			title: 'Music Video'
+		});
+				
+	    var media = require('media');
+ 
+		var videoPlayer = media.createYouTubePlayer({
+		      src: top5.theTitle.selenaGomez.url,
+		      fullscreen:true,
+		      backButtonTitle:'Back'
+		});
+		 
+		videoWindow.add(videoPlayer);
+		navWindow.openWindow(videoWindow);
+	};
+	
+	// Remove window
+	var removeWindow = function(){
+		detailWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+		songWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+		
+	};
+		
+	detailWindow.add(header, titleSong, image, songDetail, toolbar);
 	navWindow.openWindow(detailWindow);
+	playlist.addEventListener('click', getSongs);
+	albumInfo.addEventListener('click', getDetail1);
+	video.addEventListener('click', getVideo);
+	exit4.addEventListener('click', function(){ alert('Are you sure you want to log off?'); });
+	exit4.addEventListener('click', removeWindow);
 	
 };
 
@@ -687,9 +739,9 @@ var getDetail5 = function(){
 	});
 	
 	// Toolbar with 3 tabs
-	var tabBar = Titanium.UI.iOS.createTabbedBar({
+	var tabBar = Ti.UI.iOS.createTabbedBar({
 	    labels:['Album Info', 'Video', 'Exit'],
-	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+	    style:Ti.UI.iPhone.SystemButtonStyle.BAR,
 	    height: 30,
 	    width: '100%',
 	    bottom:0
