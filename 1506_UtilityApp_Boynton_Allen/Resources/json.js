@@ -2,7 +2,7 @@
 // Miu 1506
 // json data
 
-var top5Songs ={	
+var top5 ={	
 	'theTitle': 'Artists',
 		'songList': [
 			 {
@@ -63,15 +63,188 @@ var top5Songs ={
 		]
 };
 
-// Function for music list tableview
-var getSongs = function(){
+var enterButton;
+
+// Function for logging in
+var getRegistered = function(){	
+	var registerWindow = Ti.UI.createWindow ({
+		backgroundColor: 'black',
+		title: 'Registration'
+	});
 	
-	//Create song list window
+	// Aesthetic header
+	var header = Ti.UI.createLabel ({
+		backgroundColor: 'white',
+		text: 'Welcome to Spiral Records',
+		top: 0,
+		height: 30,
+		width: '100%',
+		color: '#007aff',
+		textAlign: 'center',
+		font: {fontSize: 17, fontFamily:'LobsterTwo-Italic'}
+	});
+	
+	// Create field1
+	var textField1 = Ti.UI.createTextField ({
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: header.top + header.height + 40,
+		height: 30,
+		left: 100,
+		right: 120
+	});
+	
+	//Text for field1
+	var fullName = Ti.UI.createLabel ({
+		text: '*Full Name ',
+		color: 'white',
+		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
+		top: header.top + header.height + 45,
+		left: 10
+	});
+	
+	// Input hint text for full name
+	var inputHint1 = Ti.UI.createLabel ({
+		text: 'Enter first and last name',
+		color: 'white',
+		font: {fontSize: 10},
+		top: textField1.top + textField1.height + 2,
+		left: 100
+	});
+	
+	// Create field2
+	var textField2 = Ti.UI.createTextField ({
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: textField1.top + textField1.height + 30,
+		height: 30,
+		left: 100,
+		right: 100
+	});
+	
+	//Text for field2
+	var userName = Ti.UI.createLabel ({
+		text: '*Username ',
+		color: 'white',
+		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
+		top: textField1.top + textField1.height + 35,
+		left: 10
+	});
+	
+	// Input hint text for username
+	var inputHint2 = Ti.UI.createLabel ({
+		text: 'Enter a username between 6 and 12 characters',
+		color: 'white',
+		font: {fontSize: 10},
+		top: textField2.top + textField2.height + 2,
+		left: 100
+	});
+	
+	// Create field3
+	var textField3 = Ti.UI.createTextField ({
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: textField2.top + textField2.height + 30,
+		height: 30,
+		left: 100,
+		right: 100
+	});
+	
+	//Text for field3
+	var password1 = Ti.UI.createLabel ({
+		text: '*Password ',
+		color: 'white',
+		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
+		top: textField2.top + textField2.height + 35,
+		left: 10
+	});
+	
+	// Input hint text for password
+	var inputHint3 = Ti.UI.createLabel ({
+		text: 'Enter a password between 6 and 12 characters',
+		color: 'white',
+		font: {fontSize: 10},
+		top: textField3.top + textField3.height + 2,
+		left: 100
+	});
+	
+	// Create field4
+	var textField4 = Ti.UI.createTextField ({
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: textField3.top + textField3.height + 30,
+		height: 30,
+		left: 100,
+		right: 100
+	});
+	
+	//Text for field4
+	var password2 = Ti.UI.createLabel ({
+		text: '*Password ',
+		color: 'white',
+		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
+		top: textField3.top + textField3.height + 35,
+		left: 10
+	});
+	
+	// Input hint text for password2
+	var inputHint4 = Ti.UI.createLabel ({
+		text: 'Verify password',
+		color: 'white',
+		font: {fontSize: 10},
+		top: textField4.top + textField4.height + 2,
+		left: 100
+	});
+	
+	// Sign In button
+	enterButton = Ti.UI.createButton ({
+		title: 'Enter',
+		backgroundColor: '#ef662f',
+		color: 'white',
+		font: {fontSize: 18, fontFamily:'LobsterTwo-BoldItalic'},
+		borderRadius: 4,
+		top: textField4.top + textField4.height + 50,
+		left: 100,
+		right: 160
+	});
+	
+	// Input hint text for required info
+	var required = Ti.UI.createLabel ({
+		text: '* Required Information',
+		color: '#dfdfdf',
+		font: {fontSize: 11, fontWeight: 'bold'},
+		top: textField4.top + textField4.height + 92,
+		left: 100
+	});
+	
+	// Add image to page
+	var image = Ti.UI.createImageView ({
+		image: 'images/microphone.jpg',
+		height: 240,
+		bottom: 50,
+		width: '100%'
+	});
+	
+	// Escape button
+	var exit2 = Ti.UI.createButton({
+		backgroundColor: '#dfdfdf',
+    	title: 'Exit',
+    	color: '#007aff',
+    	font: {fontSize: 20, fontWeight: 'bold'},
+    	width: '100%',
+    	height: 50,
+    	bottom:0,
+    	borderTop:true,
+    	borderBottom:false
+	});
+			
+	registerWindow.add(header, textField1, fullName, inputHint1, textField2, userName, inputHint2, textField3, password1, inputHint3, textField4, password2, inputHint4, image, enterButton, required, exit2);
+	navWindow.openWindow(registerWindow);
+	exit2.addEventListener('click', function(){ alert('Are you sure you want to log off?'); });
+	enterButton.addEventListener('click', getSongs);
+};
+	
+// Function for music list tableview
+var getSongs = function(){	
 	var songWindow = Ti.UI.createWindow ({
 		backgroundColor: 'black',
-		title: 'Top 5',
-		height: 65,
-		top: 0
+		title: 'Top 5'
 	});
 	
 	// Aesthetic header
@@ -86,26 +259,53 @@ var getSongs = function(){
 		font: {fontSize: 17, fontFamily:'LobsterTwo-Italic'}
 	});
 	
-	// Create tableview
-	var songs = Ti.UI.createTableView ({
-		data: topSongs.singles.SelenaGomez.title,
-		top: header.top + header.height,
-		hasChild: true
+	// Song 1 button
+	var getSong1 = function(){
+		var song1 = Ti.UI.createButton ({
+			backgroundColor: 'white',
+			top: header.top + header.height + 30,
+			height: 50,
+			width: '100%',
+			borderRadius: 4				
+		});
+	
+		var song1Text = Ti.UI.createLabel ({
+			text: top5.theTitle.songList.title + '\n' + top5.theTitle.songlist.artist,
+			font: {fontSize: 15, fontFamily:'LobsterTwo-BoldItalic'},
+			color: '007aff'
+		});
+	  
+		var image1 = Ti.UI.createImageView ({
+			image: 'images/Good_for_you.jpg',
+			top: header.top + header.height + 32,
+			height: 40,
+			left: 10
+		});
+		
+		// Code for top 5 window
+		songWindow.add(header, image1);
+		song1.add(song1Text);
+		navWindow.openWindow(songWindow);
+	
+	};
+	
+};	
+		
+// Album details
+var getDetail = function(){
+	var detailWindow = Ti.UI.createWindow ({
+		title: this.text,
+		backgroundColor: 'black' 
 	});
-	
-	//Top 5 view title
-	
-	if(Ti.Platform.name === 'iPhone OS'){
-		songs.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
-	}
-	
-	// Code for top 5 window
-	songWindow.add(header, songs);
-	navWindow.openWindow(songWindow);
-	
+	var detailText = Ti.UI.createLabel ({
+		text: this.details,
+		top: 30,
+		left: 10,
+		right: 10
+	});
+	detailWindow.add(detailText);
+	navWindow.openWindow(detailWindow);
 };
 
-// Main code
-exit.addEventListener('click', function(){ alert('Are you sure you want to log off?'); });
-enterButton.addEventListener('click', getSongs);
+register.addEventListener('click', getRegistered);
 loginButton.addEventListener('click', getSongs);
