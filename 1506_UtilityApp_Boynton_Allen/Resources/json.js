@@ -11,7 +11,7 @@ var top5 ={
 						'genre'		: 'Genre: Pop',
 						'released'	: 'Released June 22, 2015',
 						'label'		: 'Interscope Records',			
-						'rating'	: 'Rating: #2 Rated 4.5 out of 5 stars.',
+						'rating'	: 'Rating: Rated 4.5 out of 5 stars',
 						'image'		: 'images/Good_for_you.jpg',
 						'url'		: 'https://www.youtube.com/watch?v=DR4FJQ4dkY4'
 					},
@@ -23,7 +23,7 @@ var top5 ={
 						'genre'		: 'Genre: Pop',
 						'released'	: 'Released May 20, 2014',
 						'label'		: 'Ultra Records',			
-						'rating'	: 'Rating: #2 Rated 4.5 out of 5 stars.',
+						'rating'	: 'Rating: Rated 4.5 out of 5 stars',
 						'image'		: 'images/cheerleader.jpg',
 						'url'		: 'https://www.youtube.com/watch?v=kDX4Eezxiyk'
 					},
@@ -35,7 +35,7 @@ var top5 ={
 						'genre'		: 'Genre: Pop',
 						'released'	: 'Released May 11, 2015',
 						'label'		: 'Columbia Records',			
-						'rating'	: 'Rating: #3 Rated 4 out of 5 stars.',
+						'rating'	: 'Rating: Rated 4 out of 5 stars',
 						'image'		: 'images/fightsong.jpg',
 						'url'		: 'https://www.youtube.com/watch?v=xo1VInw-SKc'
 					},
@@ -47,7 +47,7 @@ var top5 ={
 						'genre'		: 'Genre: R&B/Soul',
 						'released'	: 'Released June 8, 2015',
 						'label'		: 'The Weeknd XO',			
-						'rating'	: 'Rating: #4 Rated 4.5 out of 5 stars.',
+						'rating'	: 'Rating: Rated 4.5 out of 5 stars',
 						'image'		: 'images/theweeknd.jpg',
 						'url'		: 'https://www.youtube.com/watch?v=dqt8Z1k0oWQ'
 					},
@@ -59,7 +59,7 @@ var top5 ={
 						'genre'		: 'Genre: Pop',
 						'released'	: 'Released May 17, 2015',
 						'label'		: 'Big Machine Records, LLC',			
-						'rating'	: 'Rating: #5 Rated 4 out of 5 stars.',
+						'rating'	: 'Rating: Rated 4 out of 5 stars',
 						'image'		: 'images/badblood.png',
 						'url'		: 'https://www.youtube.com/watch?v=QcIy9NiNbmo'
 					}
@@ -329,7 +329,7 @@ var getSongs = function(){
 	var image3 = Ti.UI.createImageView ({
 		image: top5.theTitle.rachelPlatten.image,
 		height: 75,
-		right: 280
+		left: 15
 	});
 	
 	// Song 4
@@ -384,12 +384,16 @@ var getSongs = function(){
 	song5.add(song5Text, image5);
 	songWindow.add(header, song1, song2, song3, song4, song5);
 	navWindow.openWindow(songWindow);
-	song1.addEventListener('click', getDetail);
+	song1.addEventListener('click', getDetail1);
+	song2.addEventListener('click', getDetail2);
+	song3.addEventListener('click', getDetail3);
+	song4.addEventListener('click', getDetail4);
+	song5.addEventListener('click', getDetail5);
 	
 	};	
 		
-// Album details
-var getDetail = function(){
+// Song 1 details
+var getDetail1 = function(){
 	var detailWindow = Ti.UI.createWindow ({
 		title: 'Now Playing',
 		backgroundColor: 'black' 
@@ -407,36 +411,291 @@ var getDetail = function(){
 		font: {fontSize: 18, fontFamily:'LobsterTwo-Italic'}
 	});
 
-	var titleSong1 = Ti.UI.createLabel ({
+	var titleSong = Ti.UI.createLabel ({
 		text: top5.theTitle.selenaGomez.title,
 		font: {fontSize: 17, fontWeight: 'bold'},
 		color: 'white',
 		textAlign: 'center',
-		top: header.top + header.height + 10		
+		top: header.top + header.height + 20		
 	});
 	
-	var songDetail1 = Ti.UI.createLabel ({
-		
-	});
-	
-	var image1 = Ti.UI.createImageView ({
+	var image = Ti.UI.createImageView ({
 		image: top5.theTitle.selenaGomez.image,
-		top: titleSong1.top + titleSong1.height + 2,
-		// height: 150,
+		top: titleSong.top + titleSong.height + 2,
+		bottom: 175,
 		left: 20,
 		right: 20
+	});
+	
+	// Album details
+	var songDetail = Ti.UI.createLabel ({
+		text: top5.theTitle.selenaGomez.rating + '\n' + 
+		top5.theTitle.selenaGomez.genre + ',   ' + top5.theTitle.selenaGomez.time + 
+		'\n' + top5.theTitle.selenaGomez.released + '\n' + top5.theTitle.selenaGomez.label,
+		bottom: 75,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		left: 20,
+		right: 20		
+	});
+	
+
+	
+	// Toolbar with 3 tabs
+	var tabBar = Titanium.UI.iOS.createTabbedBar({
+	    labels:['Album Info', 'Video', 'Exit'],
+	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+	    height: 30,
+	    width: '100%',
+	    bottom:0
+	});
+		
+	
+	detailWindow.add(header, titleSong, image, songDetail, tabBar);
+	navWindow.openWindow(detailWindow);
+	
+};
+
+// Song 2 details
+var getDetail2 = function(){
+	var detailWindow = Ti.UI.createWindow ({
+		title: 'Now Playing',
+		backgroundColor: 'black' 
+	});
+	
+	// Create top page header
+	var header = Ti.UI.createLabel ({
+		backgroundColor: 'white',
+		text: top5.theTitle.omi.artist,
+		top: 0,
+		height: 30,
+		width: '100%',
+		color: '#007aff',
+		textAlign: 'center',
+		font: {fontSize: 18, fontFamily:'LobsterTwo-Italic'}
+	});
+
+	var titleSong = Ti.UI.createLabel ({
+		text: top5.theTitle.omi.title,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		textAlign: 'center',
+		top: header.top + header.height + 20		
+	});
+	
+	var image = Ti.UI.createImageView ({
+		image: top5.theTitle.omi.image,
+		top: titleSong.top + titleSong.height + 2,
+		bottom: 175,
+		left: 20,
+		right: 20
+	});
+	
+	// Album details
+	var songDetail = Ti.UI.createLabel ({
+		text: top5.theTitle.omi.rating + '\n' + 
+		top5.theTitle.omi.genre + ',   ' + top5.theTitle.omi.time + 
+		'\n' + top5.theTitle.omi.released + '\n' + top5.theTitle.omi.label,
+		bottom: 75,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		left: 20,
+		right: 20		
 	});
 	
 	// Toolbar with 3 tabs
 	var tabBar = Titanium.UI.iOS.createTabbedBar({
 	    labels:['Album Info', 'Video', 'Exit'],
 	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
-	    height: 50,
+	    height: 30,
 	    width: '100%',
 	    bottom:0
 	});
-		
-	detailWindow.add(header, titleSong1, image1, tabBar);
+			
+	detailWindow.add(header, titleSong, image, songDetail, tabBar);
+	navWindow.openWindow(detailWindow);
+	
+};
+
+// Song 3 details
+var getDetail3 = function(){
+	var detailWindow = Ti.UI.createWindow ({
+		title: 'Now Playing',
+		backgroundColor: 'black' 
+	});
+	
+	// Create top page header
+	var header = Ti.UI.createLabel ({
+		backgroundColor: 'white',
+		text: top5.theTitle.rachelPlatten.artist,
+		top: 0,
+		height: 30,
+		width: '100%',
+		color: '#007aff',
+		textAlign: 'center',
+		font: {fontSize: 18, fontFamily:'LobsterTwo-Italic'}
+	});
+
+	var titleSong = Ti.UI.createLabel ({
+		text: top5.theTitle.rachelPlatten.title,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		textAlign: 'center',
+		top: header.top + header.height + 20		
+	});
+	
+	var image = Ti.UI.createImageView ({
+		image: top5.theTitle.rachelPlatten.image,
+		top: titleSong.top + titleSong.height + 2,
+		bottom: 175,
+		left: 20,
+		right: 20
+	});
+	
+	// Album details
+	var songDetail = Ti.UI.createLabel ({
+		text: top5.theTitle.rachelPlatten.rating + '\n' + 
+		top5.theTitle.rachelPlatten.genre + ',   ' + top5.theTitle.rachelPlatten.time + 
+		'\n' + top5.theTitle.rachelPlatten.released + '\n' + top5.theTitle.rachelPlatten.label,
+		bottom: 75,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		left: 20,
+		right: 20		
+	});
+	
+	// Toolbar with 3 tabs
+	var tabBar = Titanium.UI.iOS.createTabbedBar({
+	    labels:['Album Info', 'Video', 'Exit'],
+	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+	    height: 30,
+	    width: '100%',
+	    bottom:0
+	});
+			
+	detailWindow.add(header, titleSong, image, songDetail, tabBar);
+	navWindow.openWindow(detailWindow);
+	
+};
+
+// Song 4 details
+var getDetail4 = function(){
+	var detailWindow = Ti.UI.createWindow ({
+		title: 'Now Playing',
+		backgroundColor: 'black' 
+	});
+	
+	// Create top page header
+	var header = Ti.UI.createLabel ({
+		backgroundColor: 'white',
+		text: top5.theTitle.theWeeknd.artist,
+		top: 0,
+		height: 30,
+		width: '100%',
+		color: '#007aff',
+		textAlign: 'center',
+		font: {fontSize: 18, fontFamily:'LobsterTwo-Italic'}
+	});
+
+	var titleSong = Ti.UI.createLabel ({
+		text: top5.theTitle.theWeeknd.title,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		textAlign: 'center',
+		top: header.top + header.height + 20		
+	});
+	
+	var image = Ti.UI.createImageView ({
+		image: top5.theTitle.theWeeknd.image,
+		top: titleSong.top + titleSong.height + 2,
+		bottom: 175,
+		left: 20,
+		right: 20
+	});
+	
+	// Album details
+	var songDetail = Ti.UI.createLabel ({
+		text: top5.theTitle.theWeeknd.rating + '\n' + 
+		top5.theTitle.theWeeknd.genre + ',   ' + top5.theTitle.theWeeknd.time + 
+		'\n' + top5.theTitle.theWeeknd.released + '\n' + top5.theTitle.theWeeknd.label,
+		bottom: 75,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		left: 20,
+		right: 20		
+	});
+	
+	// Toolbar with 3 tabs
+	var tabBar = Titanium.UI.iOS.createTabbedBar({
+	    labels:['Album Info', 'Video', 'Exit'],
+	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+	    height: 30,
+	    width: '100%',
+	    bottom:0
+	});
+			
+	detailWindow.add(header, titleSong, image, songDetail, tabBar);
+	navWindow.openWindow(detailWindow);
+	
+};
+
+// Song 5 details
+var getDetail5 = function(){
+	var detailWindow = Ti.UI.createWindow ({
+		title: 'Now Playing',
+		backgroundColor: 'black' 
+	});
+	
+	// Create top page header
+	var header = Ti.UI.createLabel ({
+		backgroundColor: 'white',
+		text: top5.theTitle.taylorSwift.artist,
+		top: 0,
+		height: 30,
+		width: '100%',
+		color: '#007aff',
+		textAlign: 'center',
+		font: {fontSize: 18, fontFamily:'LobsterTwo-Italic'}
+	});
+
+	var titleSong = Ti.UI.createLabel ({
+		text: top5.theTitle.taylorSwift.title,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		textAlign: 'center',
+		top: header.top + header.height + 20		
+	});
+	
+	var image = Ti.UI.createImageView ({
+		image: top5.theTitle.taylorSwift.image,
+		top: titleSong.top + titleSong.height + 2,
+		bottom: 175,
+		left: 20,
+		right: 20
+	});
+	
+	// Album details
+	var songDetail = Ti.UI.createLabel ({
+		text: top5.theTitle.taylorSwift.rating + '\n' + 
+		top5.theTitle.taylorSwift.genre + ',   ' + top5.theTitle.taylorSwift.time + 
+		'\n' + top5.theTitle.taylorSwift.released + '\n' + top5.theTitle.taylorSwift.label,
+		bottom: 75,
+		font: {fontSize: 17, fontWeight: 'bold'},
+		color: 'white',
+		left: 20,
+		right: 20		
+	});
+	
+	// Toolbar with 3 tabs
+	var tabBar = Titanium.UI.iOS.createTabbedBar({
+	    labels:['Album Info', 'Video', 'Exit'],
+	    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+	    height: 30,
+	    width: '100%',
+	    bottom:0
+	});
+			
+	detailWindow.add(header, titleSong, image, songDetail, tabBar);
 	navWindow.openWindow(detailWindow);
 	
 };
