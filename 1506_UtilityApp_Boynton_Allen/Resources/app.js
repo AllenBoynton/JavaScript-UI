@@ -181,11 +181,18 @@ var getPassword = function(){
     	bottom:0,
     	borderTop:true,
     	borderBottom:false
-	});			
+	});
+	
+	// Remove window
+	var removeWindow = function(){
+		forgotWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+	};
+	
+	// Main secondary code			
 	forgotWindow.add(emailField1, email, inputHint1, emailField2, username2, image, recoverButton, exit3);
 	navWindow.openWindow(forgotWindow);
-	recoverButton.addEventListener('click', function(){ alert('Your password has been sent to your email \n Click "OK" to return to Login'); });	
-	
+	recoverButton.addEventListener('click', function(){ alert('Your password has been sent to your email \n Click "OK" to return to Login'); }, removeWindow);	
+	// recoverButton.addEventListener('click', removeWindow);
 };	
 	
 // Sign In button

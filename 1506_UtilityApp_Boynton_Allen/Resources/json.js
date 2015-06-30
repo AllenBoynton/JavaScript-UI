@@ -3,67 +3,68 @@
 // json data
 
 var top5 ={	
-	'theTitle': 'Artists',
-		'songList': [
-			 {
-				'title'		: 'Good for You (feat. A$AP Rocky) - Single',
-				'artist'	: 'Selena Gomez',
-				'time'		: 'Time: 3:41',
-				'genre'		: 'Genre: Pop',
-				'released'	: 'Released June 22, 2015',
-				'label'		: 'Interscope Records',			
-				'rating'	: 'Rating: #2 Rated 4.5 out of 5 stars.',
-				'album'		: 'images/Good_for_you.jpg',
-				'url'		: 'https://www.youtube.com/watch?v=DR4FJQ4dkY4'
-			},
-			{
-				'title'		: 'Cheerleader (Felix Jaehn Remix Radio Edit) - Single',
-				'artist'	: 'Omi',
-				'time'		: 'Time: 3:00',
-				'genre'		: 'Genre: Pop',
-				'released'	: 'Released May 20, 2014',
-				'label'		: 'Ultra Records',			
-				'rating'	: 'Rating: #2 Rated 4.5 out of 5 stars.',
-				'album'		: 'images/cheerleader.jpg',
-				'url'		: 'https://www.youtube.com/watch?v=kDX4Eezxiyk'
-			},
-			{
-				'title'		: 'Fight Song',
-				'artist'	: 'Rachel Platten',
-				'time'		: 'Time: 3:23',
-				'genre'		: 'Genre: Pop',
-				'released'	: 'Released May 11, 2015',
-				'label'		: 'Columbia Records',			
-				'rating'	: 'Rating: #3 Rated 4 out of 5 stars.',
-				'album'		: 'images/fightsong.jpg',
-				'url'		: 'https://www.youtube.com/watch?v=xo1VInw-SKc'
-			},
-			{
-				'title'		: 'Can\'t Feel My Face - Single',
-				'artist'	: 'The Weeknd',
-				'time'		: 'Time: 3:35',
-				'genre'		: 'Genre: R&B/Soul',
-				'released'	: 'Released June 8, 2015',
-				'label'		: 'The Weeknd XO',			
-				'rating'	: 'Rating: #4 Rated 4.5 out of 5 stars.',
-				'album'		: 'images/theweeknd.jpg',
-				'url'		: 'https://www.youtube.com/watch?v=dqt8Z1k0oWQ'
-			},
-			{
-				'title'		: 'Bad Blood (feat. Kendrick Lamar) - Single',
-				'artist'	: 'Taylor Swift',
-				'time'		: 'Time: 3:19',
-				'genre'		: 'Genre: Pop',
-				'released'	: 'Released May 17, 2015',
-				'label'		: 'Big Machine Records, LLC',			
-				'rating'	: 'Rating: #5 Rated 4 out of 5 stars.',
-				'album'		: 'images/badblood.png',
-				'url'		: 'https://www.youtube.com/watch?v=QcIy9NiNbmo'
-			}
-		]
+		'theTitle': {
+				'selenaGomez': {
+						'title'		: 'Good for You (feat. A$AP Rocky) - Single',
+						'artist'	: 'Selena Gomez',
+						'time'		: 'Time: 3:41',
+						'genre'		: 'Genre: Pop',
+						'released'	: 'Released June 22, 2015',
+						'label'		: 'Interscope Records',			
+						'rating'	: 'Rating: #2 Rated 4.5 out of 5 stars.',
+						'image'		: 'images/Good_for_you.jpg',
+						'url'		: 'https://www.youtube.com/watch?v=DR4FJQ4dkY4'
+					},
+					
+				'omi': {
+						'title'		: 'Cheerleader (Felix Jaehn Remix Radio Edit) - Single',
+						'artist'	: 'Omi',
+						'time'		: 'Time: 3:00',
+						'genre'		: 'Genre: Pop',
+						'released'	: 'Released May 20, 2014',
+						'label'		: 'Ultra Records',			
+						'rating'	: 'Rating: #2 Rated 4.5 out of 5 stars.',
+						'image'		: 'images/cheerleader.jpg',
+						'url'		: 'https://www.youtube.com/watch?v=kDX4Eezxiyk'
+					},
+					
+				'rachelPlatten': {
+						'title'		: 'Fight Song',
+						'artist'	: 'Rachel Platten',
+						'time'		: 'Time: 3:23',
+						'genre'		: 'Genre: Pop',
+						'released'	: 'Released May 11, 2015',
+						'label'		: 'Columbia Records',			
+						'rating'	: 'Rating: #3 Rated 4 out of 5 stars.',
+						'image'		: 'images/fightsong.jpg',
+						'url'		: 'https://www.youtube.com/watch?v=xo1VInw-SKc'
+					},
+					
+				'theWeeknd': {
+						'title'		: 'Can\'t Feel My Face - Single',
+						'artist'	: 'The Weeknd',
+						'time'		: 'Time: 3:35',
+						'genre'		: 'Genre: R&B/Soul',
+						'released'	: 'Released June 8, 2015',
+						'label'		: 'The Weeknd XO',			
+						'rating'	: 'Rating: #4 Rated 4.5 out of 5 stars.',
+						'image'		: 'images/theweeknd.jpg',
+						'url'		: 'https://www.youtube.com/watch?v=dqt8Z1k0oWQ'
+					},
+					
+				'taylorSwift': {
+						'title'		: 'Bad Blood (feat. Kendrick Lamar) - Single',
+						'artist'	: 'Taylor Swift',
+						'time'		: 'Time: 3:19',
+						'genre'		: 'Genre: Pop',
+						'released'	: 'Released May 17, 2015',
+						'label'		: 'Big Machine Records, LLC',			
+						'rating'	: 'Rating: #5 Rated 4 out of 5 stars.',
+						'image'		: 'images/badblood.png',
+						'url'		: 'https://www.youtube.com/watch?v=QcIy9NiNbmo'
+					}
+		}		
 };
-
-var enterButton;
 
 // Function for logging in
 var getRegistered = function(){	
@@ -193,7 +194,7 @@ var getRegistered = function(){
 	});
 	
 	// Sign In button
-	enterButton = Ti.UI.createButton ({
+	var enterButton = Ti.UI.createButton ({
 		title: 'Enter',
 		backgroundColor: '#ef662f',
 		color: 'white',
@@ -259,50 +260,46 @@ var getSongs = function(){
 		font: {fontSize: 17, fontFamily:'LobsterTwo-Italic'}
 	});
 	
-	// Song 1 button
-	var getSong1 = function(){
-		var song1 = Ti.UI.createButton ({
-			backgroundColor: 'white',
-			top: header.top + header.height + 30,
-			height: 50,
-			width: '100%',
-			borderRadius: 4				
-		});
+	var song1 = Ti.UI.createButton ({
+		backgroundColor: 'white',
+		top: header.top + header.height + 30,
+		height: 75,
+		width: '100%'				
+	});
+
+	var song1Text = Ti.UI.createLabel ({
+		text: top5.theTitle.artist,
+		font: {fontSize: 18, fontWeight: 'bold', fontFamily:'LobsterTwo-BoldItalic'},
+		color: '007aff'
+	});
+  
+	var image1 = Ti.UI.createImageView ({
+		image: 'images/Good_for_you.jpg',
+		height: '100%',
+		left: 5
+	});
 	
-		var song1Text = Ti.UI.createLabel ({
-			text: top5.theTitle.songList.title + '\n' + top5.theTitle.songlist.artist,
-			font: {fontSize: 15, fontFamily:'LobsterTwo-BoldItalic'},
-			color: '007aff'
-		});
-	  
-		var image1 = Ti.UI.createImageView ({
-			image: 'images/Good_for_you.jpg',
-			top: header.top + header.height + 32,
-			height: 40,
-			left: 10
-		});
-		
-		// Code for top 5 window
-		songWindow.add(header, image1);
-		song1.add(song1Text);
-		navWindow.openWindow(songWindow);
-	
-	};
+	// Code for top 5 window
+	song1.add(song1Text, image1);
+	songWindow.add(header, song1);
+	navWindow.openWindow(songWindow);
+	loginButton.addEventListener('click', getSongs);
 	
 };	
 		
 // Album details
 var getDetail = function(){
 	var detailWindow = Ti.UI.createWindow ({
-		title: this.text,
+		title: this.artist,
 		backgroundColor: 'black' 
 	});
 	var detailText = Ti.UI.createLabel ({
-		text: this.details,
+		text: this.title,
 		top: 30,
 		left: 10,
 		right: 10
 	});
+	
 	detailWindow.add(detailText);
 	navWindow.openWindow(detailWindow);
 };
