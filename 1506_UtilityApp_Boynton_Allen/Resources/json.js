@@ -89,7 +89,7 @@ var getRegistered = function(){
 	var textField1 = Ti.UI.createTextField ({
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 		top: header.top + header.height + 40,
-		height: 30,
+		height: 25,
 		left: 100,
 		right: 120
 	});
@@ -99,7 +99,7 @@ var getRegistered = function(){
 		text: '*Full Name ',
 		color: 'white',
 		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
-		top: header.top + header.height + 45,
+		top: header.top + header.height + 40,
 		left: 10
 	});
 	
@@ -112,11 +112,38 @@ var getRegistered = function(){
 		left: 100
 	});
 	
+	// Create field5
+	var textField5 = Ti.UI.createTextField ({
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		top: textField1.top + textField1.height + 30,
+		height: 25,
+		left: 100,
+		right: 100
+	});
+	
+	//Text for field2
+	var email = Ti.UI.createLabel ({
+		text: '*Email ',
+		color: 'white',
+		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
+		top: textField1.top + textField1.height + 30,
+		left: 10
+	});
+	
+	// Input hint text for email
+	var inputHint5 = Ti.UI.createLabel ({
+		text: 'Enter a valid email address',
+		color: 'white',
+		font: {fontSize: 10},
+		top: textField5.top + textField5.height + 2,
+		left: 100
+	});
+	
 	// Create field2
 	var textField2 = Ti.UI.createTextField ({
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-		top: textField1.top + textField1.height + 30,
-		height: 30,
+		top: textField5.top + textField5.height + 30,
+		height: 25,
 		left: 100,
 		right: 100
 	});
@@ -126,7 +153,7 @@ var getRegistered = function(){
 		text: '*Username ',
 		color: 'white',
 		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
-		top: textField1.top + textField1.height + 35,
+		top: textField5.top + textField5.height + 30,
 		left: 10
 	});
 	
@@ -143,7 +170,7 @@ var getRegistered = function(){
 	var textField3 = Ti.UI.createTextField ({
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 		top: textField2.top + textField2.height + 30,
-		height: 30,
+		height: 25,
 		left: 100,
 		right: 100
 	});
@@ -153,7 +180,7 @@ var getRegistered = function(){
 		text: '*Password ',
 		color: 'white',
 		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
-		top: textField2.top + textField2.height + 35,
+		top: textField2.top + textField2.height + 30,
 		left: 10
 	});
 	
@@ -170,7 +197,7 @@ var getRegistered = function(){
 	var textField4 = Ti.UI.createTextField ({
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 		top: textField3.top + textField3.height + 30,
-		height: 30,
+		height: 25,
 		left: 100,
 		right: 100
 	});
@@ -180,7 +207,7 @@ var getRegistered = function(){
 		text: '*Password ',
 		color: 'white',
 		font: {fontSize: 16, fontFamily:'LobsterTwo-BoldItalic'},
-		top: textField3.top + textField3.height + 35,
+		top: textField3.top + textField3.height + 30,
 		left: 10
 	});
 	
@@ -240,7 +267,7 @@ var getRegistered = function(){
 		registerWindow.close();
 	};
 			
-	registerWindow.add(header, textField1, fullName, inputHint1, textField2, userName, inputHint2, textField3, password1, inputHint3, textField4, password2, inputHint4, image, enterButton, required, exit2);
+	registerWindow.add(header, image, textField1, fullName, inputHint1, textField2, userName, inputHint2, textField3, password1, inputHint3, textField4, password2, inputHint4, textField5, email, inputHint5, enterButton, required, exit2);
 	navWindow.openWindow(registerWindow);
 	exit2.addEventListener('click', function(){ alert('Are you sure you want to log off?'); });
 	exit2.addEventListener('click', removeWindow);

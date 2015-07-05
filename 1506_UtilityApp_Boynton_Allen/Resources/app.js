@@ -26,28 +26,28 @@ var header = Ti.UI.createLabel ({
 });
 
 // Variables to create toolbar
-var register = Titanium.UI.createButton({
+var register = Ti.UI.createButton({
     title: 'Register',
-    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+    style: Ti.UI.iPhone.SystemButtonStyle.DONE,
 });
 
-var top5 = Titanium.UI.createButton({
-	title: 'TOP 5',
-    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+var fullSail = Ti.UI.createButton({
+	title: 'F.S.U.',
+    style: Ti.UI.iPhone.SystemButtonStyle.DONE,
 });
 
-var exit = Titanium.UI.createButton({
+var exit = Ti.UI.createButton({
     title: '       Exit ',
-    style: Titanium.UI.iPhone.SystemButtonStyle.DONE,
+    style: Ti.UI.iPhone.SystemButtonStyle.DONE,
 });
 
-flexSpace = Titanium.UI.createButton({
-    systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+flexSpace = Ti.UI.createButton({
+    systemButton:Ti.UI.iPhone.SystemButton.FLEXIBLE_SPACE
 });
 
 // Toolbar with 3 tabs
-var toolbar = Titanium.UI.iOS.createToolbar({
-    items:[register, flexSpace, top5, flexSpace, exit],
+var toolbar = Ti.UI.iOS.createToolbar({
+    items:[register, flexSpace, fullSail, flexSpace, exit],
     bottom:0,
     borderTop:true,
     borderBottom:false
@@ -185,7 +185,7 @@ var getPassword = function(){
 	
 	// Remove window
 	var removeWindow = function(){
-		forgotWindow.close({transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT});
+		forgotWindow.close();
 	};
 	
 	// Main secondary code			
@@ -216,12 +216,30 @@ var image = Ti.UI.createImageView ({
 	width: '100%' 
 });
 
-// Load json data to bootstrap file
+// Create web video page
+var getVideo = function(){
+	var videoWindow = Ti.UI.createWindow ({
+		backgroundColor: 'black',
+		title: 'Music Video'
+		});
+ 
+		var videoPlayer = media.createYouTubePlayer({
+		      src: 'https://www.youtube.com/watch?v=tbFx6zsR_-I&list=PLCEFD472EB2404E84&index=1',
+		      fullscreen:true,
+		      backButtonTitle:'Back'
+	});
+	 
+	videoWindow.add(videoPlayer);
+	navWindow.openWindow(videoWindow);
+};
+
+// Load json and media data to bootstrap file
 var loadFile = require('json');
+var media = require('media');
 
 // Main code for view function
 mainWindow.add(header, toolbar, username, password, forgot, loginButton, image);
-top5.addEventListener('click', function(){ alert('Please login to view your library.'); });
+fullSail.addEventListener('click', getVideo);
 exit.addEventListener('click', function(){ alert('Are you sure you want to log off?'); });
 forgot.addEventListener('click', getPassword);
 navWindow.open();
